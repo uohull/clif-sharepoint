@@ -1,0 +1,13 @@
+*.class
+*.bak
+*.jar
+*.pkg
+*.zip
+*.war
+*.sql
+*.obj
+*.exe
+*.bin
+*.zip
+*.pdb
+*.suo

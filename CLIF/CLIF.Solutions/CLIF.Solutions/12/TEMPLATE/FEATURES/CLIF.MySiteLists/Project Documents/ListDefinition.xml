@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="fa7c8b08-1e45-4837-8310-f8a9b760486e" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate 
+    Name="Project Documents" 
+    DisplayName="Project Documents" 
+    Description="Create a document library for projects." 
+    BaseType="1"
+    Type="20007"
+    OnQuickLaunch="TRUE" 
+    SecurityBits="11" 
+    Sequence="110" 
+    Image="/_layouts/images/icon_document.gif" 
+   />
+  <ListInstance
+    Title="Project Documents"
+    Description="Use this document library to store personal project documents."
+    Id="30007"
+    TemplateType="20007"
+    Url="Lists/Project Documents"
+    OnQuickLaunch="TRUE"
+    FeatureId="d470b616-efad-493f-a8d4-6ca9f51ad97f">
+  </ListInstance>
+</Elements>

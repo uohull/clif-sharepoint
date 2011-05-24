@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="dba3a6fb-5c1a-4d62-9660-89aacafe5176" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate 
+    Name="Publishable Status" 
+    DisplayName="Publishable Status" 
+    Description="" 
+    BaseType="0" 
+    NoCrawl="TRUE" 
+    Type="20004" 
+    OnQuickLaunch="TRUE" 
+    SecurityBits="11" 
+    Sequence="410" 
+    Image="/_layouts/images/itgen.gif" />
+  <ListInstance     
+       Title="Publishable Status"
+       Description="Publishable Status List"
+       Id="30004"
+       TemplateType="20004"
+       Url="Lists/PublishableStatus"
+       OnQuickLaunch="FALSE"
+       FeatureId="0a41aa11-9357-4353-b2c3-512525a3bcee">
+  </ListInstance>
+</Elements>

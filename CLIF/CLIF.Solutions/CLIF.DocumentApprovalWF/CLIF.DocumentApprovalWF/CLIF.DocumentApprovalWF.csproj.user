@@ -1,0 +1,18 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{F8810EC1-6754-47FC-A15F-DFABD2E3FA90}">
+        <DisplayName>CLIF.DocumentApprovalWF</DisplayName>
+        <SiteURL>http://andy-b8affe6405/personal/383509</SiteURL>
+        <ListURL>http://andy-b8affe6405/personal/383509/Lists/Archive/AllItems.aspx</ListURL>
+        <TargetList Id="{aad82590-1426-47ff-be44-785860aee1ee}">Archive</TargetList>
+        <HistoryList Id="{e5b50517-9e0c-44c6-a12d-f503493e96a1}">Workflow History</HistoryList>
+        <TaskList Id="{76d844b2-1d3b-4d69-b986-23a51e254fea}">Tasks</TaskList>
+        <AutoAssociate>true</AutoAssociate>
+        <ManualStart>true</ManualStart>
+        <StartOnCreate>false</StartOnCreate>
+        <StartOnChange>false</StartOnChange>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+X=====================================================================X
+Title:              CLIF.MySite
+Author:             Suresh Thampi
+Project:            CLIF.Solutions
+Date:               04/11/2010
+Copyright:          © Center for e-research(CeRch), 
+                    King's College London 2010 All Rights Reserved.
+Description:        Activating this feature changes MySite look & feel
+X=====================================================================X
+-->
+<Feature
+	Id="F356F835-33D8-424A-87AF-0CB31823C6CC" xmlns="http://schemas.microsoft.com/sharepoint/"
+	Title="CLIF.MySite"
+	Scope="Site"
+	Hidden="False"
+  ImageUrl="kpinormal-0.gif"
+  ReceiverAssembly="CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd"
+  ReceiverClass="CLIF.Solutions.Code.MySite"
+	Description="Activating this feature will create cutomised mysite.">
+	<ElementManifests>
+		<ElementFile	Location="Files/KCL_MySite.master" />
+		<ElementManifest	Location="Elements.xml" />
+	</ElementManifests>
+
+  <Properties>
+    <Property Key="MasterPageFile" Value="CLIF/KCL/KCL_MySite.Master"/>
+  </Properties>
+</Feature>

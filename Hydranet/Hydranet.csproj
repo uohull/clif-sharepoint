@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{96863BF2-1948-4251-AF09-6BB3D038BB9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>uk.ac.hull.repository.hydranet</RootNamespace>
+    <AssemblyName>Hydranet</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <PublishUrl>http://localhost/Hydranet/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Hydranet.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\serviceref.fedoraaccess\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\serviceref.fedoramanagement\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="src\uk\ac\hull\repository\hydranet\content\ExternalReferencedObjectContent.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\content\FedoraObjectImpl.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\content\IFedoraObject.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\content\InternalXMLObjectContent.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\content\IObjectContent.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\content\IObjectDatastream.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\content\ManagedObjectContent.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\content\ObjectDatastreamImpl.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\content\RedirectObjectContent.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\fedora\FedoraAccessSOAPImpl.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\fedora\FedoraManagementSOAPImpl.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\fedora\FedoraServer.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\fedora\IFedoraAccess.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\fedora\IFedoraManagement.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\fedora\ResourceIndexClient.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\hydracontent\ContentFactory.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\hydracontent\ContentObject.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\hydracontent\ContentObjectList.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\hydracontent\metadata\DublinCoreMetadata.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\hydracontent\metadata\IMetadata.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\hydracontent\metadata\MODSMetadata.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\hydracontent\metadata\RelationshipMetadata.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\service\FedoraManagementServices.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\service\FileTransfer.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\service\HydraServiceFedoraExtended.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\service\HydraServiceFedoraImpl.cs" />
+    <Compile Include="src\uk\ac\hull\repository\hydranet\service\IHydraService.cs" />
+    <Compile Include="src\uk\ac\hull\repository\utils\MimeTypeHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\serviceref.fedoraaccess\" />
+    <WCFMetadataStorage Include="Service References\serviceref.fedoramanagement\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\serviceref.fedoramanagement\management.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\serviceref.fedoramanagement\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\serviceref.fedoramanagement\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\serviceref.fedoraaccess\access.wsdl" />
+    <None Include="Service References\serviceref.fedoramanagement\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\serviceref.fedoramanagement\uk.ac.hull.repository.hydranet.serviceref.fedoramanagement.Datastream.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\serviceref.fedoramanagement\uk.ac.hull.repository.hydranet.serviceref.fedoramanagement.RelationshipTuple.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\serviceref.fedoraaccess\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\serviceref.fedoraaccess\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hydranet.snk" />
+    <EmbeddedResource Include="mods-3-3.xsd" />
+    <EmbeddedResource Include="oai_dc.xsd" />
+    <None Include="Service References\serviceref.fedoraaccess\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\serviceref.fedoraaccess\uk.ac.hull.repository.hydranet.serviceref.fedoraaccess.DatastreamDef.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\serviceref.fedoraaccess\uk.ac.hull.repository.hydranet.serviceref.fedoraaccess.FieldSearchResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\serviceref.fedoraaccess\uk.ac.hull.repository.hydranet.serviceref.fedoraaccess.MIMETypedStream.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\serviceref.fedoraaccess\uk.ac.hull.repository.hydranet.serviceref.fedoraaccess.ObjectMethodsDef.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\serviceref.fedoraaccess\uk.ac.hull.repository.hydranet.serviceref.fedoraaccess.ObjectProfile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\serviceref.fedoraaccess\uk.ac.hull.repository.hydranet.serviceref.fedoraaccess.RepositoryInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <EmbeddedResource Include="simpledc20021212.xsd" />
+    <EmbeddedResource Include="xlink.xsd" />
+    <EmbeddedResource Include="xml.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

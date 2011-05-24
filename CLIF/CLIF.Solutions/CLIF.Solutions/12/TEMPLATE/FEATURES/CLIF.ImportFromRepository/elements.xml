@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="CLIF.ImportFromRepository"
+    RegistrationType="List"
+	  GroupId="ActionsMenu"
+	  Location="Microsoft.SharePoint.StandardMenu"
+    Title="Import From Repository"
+    Sequence="102"
+    ImageUrl="_layouts/images/lg_ICONGO.gif">    
+    <UrlAction Url="javascript:window.location= '{SiteUrl}/_layouts/clifpages/Importfromrepository.aspx?List={ListId}&amp;Source=' + window.location"/>
+  </CustomAction>
+
+</Elements>

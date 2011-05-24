@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ContentType 
+    ID="0x0100F60EBB6147764ece9C8542C53E3F9EFD" 
+    Name="Publishable Locations" 
+    Group="CLIF.Solutions"     
+    >
+    <Folder TargetName="Publishable Locations" />
+    <FieldRefs>
+      <FieldRef ID="{c042a256-787d-4a6f-8a8a-cf6ab767f12d}" Name="ContentType" />
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="TRUE" ShowInNewForm="TRUE" ShowInEditForm="TRUE" />
+      <FieldRef ID="{20e0f22c-8dd9-4216-adb7-439140ba75f8}" Name="Persistent_x0020_ID" Required="FALSE" ShowInNewForm="TRUE" ShowInEditForm="TRUE" ReadOnly="FALSE" />
+      <FieldRef ID="{e0911c35-71c8-4f0d-a788-7f365efded09}" Name="Document_x0020_Approver" DisplayName="Document Approver" Required="FALSE" Hidden="FALSE" ReadOnly="FALSE" />
+      <FieldRef ID="{a29ea833-5ae6-4ee5-bbff-5610ee54c3e2}" Name="Location Description" Required="FALSE" />
+    </FieldRefs>  
+  </ContentType>
+  
+</Elements>

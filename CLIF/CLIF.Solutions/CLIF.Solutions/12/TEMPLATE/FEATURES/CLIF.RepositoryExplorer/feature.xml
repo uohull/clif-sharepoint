@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+***************************************************************************
+Created On: 04/11/2010
+Created By: Suresh Thampi
+==========================================================================
+Description:
+This feature This feature adds menu option to view repository explorer.
+***************************************************************************
+-->
+<Feature  Id="f65c4d96-55bd-48b4-bf58-e5eab8cebdc6"
+          Title="CLIF.RepositoryExplorer"
+          Description="This feature adds site action menu to view repository explorer."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Web"
+          ImageUrl="kpinormal-0.gif"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+</Feature>

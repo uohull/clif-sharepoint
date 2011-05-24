@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLIF.Solutions", "CLIF.Solutions\CLIF.Solutions.csproj", "{CC0758BA-0954-447A-9305-6FB72EDB50F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLIF.Solutions.Code", "CLIF.Solutions.Code\CLIF.Solutions.Code.csproj", "{F92B621D-BD78-4869-A705-1EBB6449941F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolicyManagement", "..\..\PolicyManagement\PolicyManagement.csproj", "{BA3EE6F8-29F6-493C-9856-AF8399429051}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydranet", "..\..\Hydranet\Hydranet.csproj", "{96863BF2-1948-4251-AF09-6BB3D038BB9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUtils", "..\..\Common\Web\WebUtils.csproj", "{C0D97556-7650-438E-8E82-D8F461534B42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLIF.DocumentApprovalWF", "CLIF.DocumentApprovalWF\CLIF.DocumentApprovalWF\CLIF.DocumentApprovalWF.csproj", "{919289A6-D4F3-4E0F-B55B-496CA6CDC1F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC0758BA-0954-447A-9305-6FB72EDB50F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC0758BA-0954-447A-9305-6FB72EDB50F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC0758BA-0954-447A-9305-6FB72EDB50F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC0758BA-0954-447A-9305-6FB72EDB50F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F92B621D-BD78-4869-A705-1EBB6449941F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F92B621D-BD78-4869-A705-1EBB6449941F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F92B621D-BD78-4869-A705-1EBB6449941F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F92B621D-BD78-4869-A705-1EBB6449941F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA3EE6F8-29F6-493C-9856-AF8399429051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA3EE6F8-29F6-493C-9856-AF8399429051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA3EE6F8-29F6-493C-9856-AF8399429051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA3EE6F8-29F6-493C-9856-AF8399429051}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96863BF2-1948-4251-AF09-6BB3D038BB9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96863BF2-1948-4251-AF09-6BB3D038BB9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96863BF2-1948-4251-AF09-6BB3D038BB9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96863BF2-1948-4251-AF09-6BB3D038BB9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0D97556-7650-438E-8E82-D8F461534B42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0D97556-7650-438E-8E82-D8F461534B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0D97556-7650-438E-8E82-D8F461534B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0D97556-7650-438E-8E82-D8F461534B42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{919289A6-D4F3-4E0F-B55B-496CA6CDC1F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{919289A6-D4F3-4E0F-B55B-496CA6CDC1F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

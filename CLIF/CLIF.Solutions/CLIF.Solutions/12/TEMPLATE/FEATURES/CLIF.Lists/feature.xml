@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+X=====================================================================X
+Title:              CLIF.Lists
+Author:             Suresh Thampi
+Project:            CLIF.Solutions
+Date:               04/11/2010
+Copyright:          © Center for e-research(CeRch), 
+                    King's College London 2010 All Rights Reserved.
+Description:        Activating this feature creates list templates and instances.
+X=====================================================================X
+-->
+<Feature  Id="59d73371-02cb-4b45-a203-cd7e4904f27b"
+          Title="CLIF.Lists"
+          Description="Activating this feature create list templates and list instances."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Web"
+          DefaultResourceFile="core"
+          ImageUrl="kpinormallarge-0.gif"            
+          xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <ActivationDependencies>
+    <!--CLIF.ContentTypes-->
+    <ActivationDependency FeatureId="7D7AEFC4-8494-4CE7-875A-FF08212DD403" />
+  </ActivationDependencies>
+  
+  <ElementManifests>
+  
+    <!--MySite Repository Settings-->
+    <ElementManifest Location="MySite Repository Settings\ListDefinition.xml"/>
+
+    <!--Repository Operation Logs-->
+    <ElementManifest Location="Repository Operation Logs\ListDefinition.xml"/>
+    
+    <!--Repository Operation Logs-->
+    <ElementManifest Location="Repository Config Files\ListDefinition.xml"/>
+
+    <!--Document Approval Tasks-->
+    <ElementManifest Location="Document Approval Tasks\ListDefinition.xml"/>
+
+  </ElementManifests>
+</Feature>

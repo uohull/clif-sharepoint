@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="065632bc-63c2-4032-b83a-22dddf315673"
+          Title="CLIF.WebConfigEntries"
+          Description="Activating this feature will update application's web.config file."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="WebApplication"
+          DefaultResourceFile="core"
+          ImageUrl="kpinormal-0.gif"
+          ReceiverAssembly="CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd"
+          ReceiverClass="CLIF.Solutions.Code.WebConfigEntries"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+</Feature>

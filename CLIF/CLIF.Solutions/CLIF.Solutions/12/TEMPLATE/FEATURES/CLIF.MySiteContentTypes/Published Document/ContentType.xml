@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/"> 
+  <ContentType 
+    ID="0x0100BA964CD298F395408925EA09C2C30DDA" 
+    Name="Published Document" 
+    Group="CLIF.Solutions" 
+    Version="2" 
+    >
+    <FieldRefs>
+      <FieldRef ID="{c042a256-787d-4a6f-8a8a-cf6ab767f12d}" Name="ContentType" />
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="TRUE" DisplayName="Document Title" />
+      <FieldRef ID="{7be751e1-71f9-44e3-96c6-31020a25fa69}" Name="Published_x0020_Date" Required="TRUE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE"/>
+      <FieldRef ID="{58D4AC81-108A-4e5d-8F66-69E83D21B83E}" Name="Persistent_x0020_ID" Required="TRUE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE"/>
+      <FieldRef ID="{CF1B58C9-1158-449f-AF73-DEE726F249BE}" Name="Content_x0020_MimeType" Required="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE" />
+    </FieldRefs>
+  </ContentType>
+  
+  
+</Elements>

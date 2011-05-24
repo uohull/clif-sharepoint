@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="fa235047-5bbf-4dae-98aa-f2def8de59ba" xmlns="http://schemas.microsoft.com/sharepoint/">
+ <!--Repository List Settings-->
+  <ListTemplate
+    Name="Document Approval Tasks"
+    DisplayName="Document Approval Tasks"
+    BaseType="0"
+    Type="200011"
+    OnQuickLaunch="TRUE"
+    SecurityBits="11"
+    Sequence="410"
+    Image="/_layouts/images/itgen.gif" />
+
+  <ListInstance
+       Title="Document Approval Tasks"
+       Description="Document Approval Tasks List"
+       Id="300011"
+       TemplateType="200011"
+       Url="Lists/DocumentApprovalTasks"
+       OnQuickLaunch="TRUE"
+       FeatureId="59d73371-02cb-4b45-a203-cd7e4904f27b">
+  </ListInstance>
+  
+</Elements>

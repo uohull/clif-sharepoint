@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="e61c82eb-e83b-4909-9bca-1a5ae6967c45"
+          Title="CLIF.ConfigureDocumentLibrary"
+          Description="Activating this feature will Configure MySite Document Libraries."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Web"
+          DefaultResourceFile="core"
+          ImageUrl="kpinormal-0.gif"
+          ReceiverAssembly="CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd"
+          ReceiverClass="CLIF.Solutions.Code.ConfigureDocumentLibrary"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+</Feature>

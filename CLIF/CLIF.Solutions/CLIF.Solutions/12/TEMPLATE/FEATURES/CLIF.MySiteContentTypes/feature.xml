@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="a6461fd9-bc23-458b-91b7-1ad499e14033"
+          Title="CLIF.MySiteContentTypes"
+          Description="Activating this feature adds CLIF MySite ContentTypes."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Site"
+          ImageUrl="kpinormal-0.gif"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <!--Project Documents-->
+    <ElementManifest Location="Project Document\ContentType.xml"/>
+
+    <!--Content Language-->
+    <ElementManifest Location="Content Language\ContentType.xml"/>
+
+    <!--Content Source-->
+    <ElementManifest Location="Content Source\ContentType.xml"/>
+
+    <!--Archive-->
+    <ElementManifest Location="Archive\ContentType.xml"/>
+
+    <!--Document Approval Task-->
+    <ElementManifest Location="Document Approval Task\ContentType.xml"/>
+
+    <!-- Project-->
+    <ElementManifest Location="Project\ContentType.xml"/>
+
+    <!--Content Right-->
+    <ElementManifest Location="Content Right\ContentType.xml"/>
+
+    <!--Published Document-->
+    <ElementManifest Location="Published Document\ContentType.xml"/>
+
+  </ElementManifests> 
+</Feature>

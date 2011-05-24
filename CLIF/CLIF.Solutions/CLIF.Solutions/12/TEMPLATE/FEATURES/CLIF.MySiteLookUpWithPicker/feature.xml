@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="640d3ace-0fcf-45ef-acc9-89b68619266f"
+          Title="CLIF.MySiteLookUpWithPicker"
+          Description="Description for CLIF.MySiteLookUpWithPicker"
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Site"
+          ImageUrl="kpinormal-0.gif"
+          DefaultResourceFile="core"
+          ReceiverAssembly="CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd"
+          ReceiverClass="CLIF.Solutions.Code.LookUpWithPickerFields"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+  <Properties>
+    <Property Key="XmlFields" Value="elements.xml"/>
+  </Properties>
+</Feature>

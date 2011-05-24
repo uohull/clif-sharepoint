@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements
+  xmlns="http://schemas.microsoft.com/sharepoint/"
+  xmlns:LookUp="http://schemas.grepton.com/sharepoint/">
+  
+  <!-- [Published Location] Field Def-->
+  <Field
+    Type="LookupFieldWithPicker"
+    ID="{3848CFAB-902A-4c4b-894D-18A52942E6DA}"
+    DisplayName="Published Location"
+    Required="TRUE"
+    List="Publishable Locations"
+    ShowField="Title"
+    Mult="FALSE"
+    Sortable="FALSE"
+    UnlimitedLengthInDocumentLibrary="FALSE"
+    Group="CLIF.Solutions"
+    Description="Please select"
+    StaticName="Published_x0020_Location"
+    Name="Published_x0020_Location"
+    LookUp:ContentTypes="Document Approval Task|Published Location|2"
+    
+    LookUp:ListName="Publishable Locations"
+    LookUp:ListField="Title"
+    LookUp:SearchFields="Title"
+    LookUp:EntityEditorRows="1"
+    LookUp:LookupWebId="{LookupWebId}"
+  />
+</Elements>

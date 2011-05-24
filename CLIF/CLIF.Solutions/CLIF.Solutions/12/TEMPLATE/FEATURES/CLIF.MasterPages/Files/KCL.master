@@ -1,0 +1,229 @@
+<%@ Master Language="C#" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ Import Namespace="Microsoft.SharePoint" %>
+<%@ Register TagPrefix="SPSWC" Namespace="Microsoft.SharePoint.Portal.WebControls"
+    Assembly="Microsoft.SharePoint.Portal, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls"
+    Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages"
+    Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="PublishingWebControls" Namespace="Microsoft.SharePoint.Publishing.WebControls"
+    Assembly="Microsoft.SharePoint.Publishing, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="PublishingNavigation" Namespace="Microsoft.SharePoint.Publishing.Navigation"
+    Assembly="Microsoft.SharePoint.Publishing, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="wssuc" TagName="Welcome" Src="~/_controltemplates/Welcome.ascx" %>
+<%@ Register TagPrefix="wssuc" TagName="DesignModeConsole" Src="~/_controltemplates/DesignModeConsole.ascx" %>
+<%@ Register TagPrefix="PublishingVariations" TagName="VariationsLabelMenu" Src="~/_controltemplates/VariationsLabelMenu.ascx" %>
+<%@ Register TagPrefix="PublishingConsole" TagName="Console" Src="~/_controltemplates/PublishingConsole.ascx" %>
+<%@ Register TagPrefix="PublishingSiteAction" TagName="SiteActionMenu" Src="~/_controltemplates/PublishingActionMenu.ascx" %>
+<%@ Register Assembly="CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd"
+    Namespace="CLIF.Solutions.Code" TagPrefix="CLIFControls" %>
+<%@ Register TagPrefix="CLIFControls" TagName="SimpleSearch" Src="~/_controltemplates/CLIFUserControls/SimpleSearch.ascx" %>
+<html id="Html1" dir="<%$Resources:wss, multipages_direction_dir_value %>" runat="server">
+<head id="Head1" runat="server">
+    <meta name="GENERATOR" content="Microsoft SharePoint">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Expires" content="0">
+    <SharePoint:RobotsMetaTag ID="RobotsMetaTag1" runat="server" />
+    <title id="onetidTitle">
+        <asp:ContentPlaceHolder ID="PlaceHolderPageTitle" runat="server" />
+    </title>
+    <SharePoint:CssLink ID="CssLink1" runat="server" />
+    <link rel="stylesheet" type="text/css" href="/Style%20Library/CLIF/KCL/CSS/OverrideCORE.CSS"/>     
+    <!--Styles used for positioning, font and spacing definitions-->
+    <%--<SharePoint:CssRegistration ID="CssRegistration1" name="<% $SPUrl:~SiteCollection/Style Library/~language/Core Styles/Tabs.css%>" runat="server"/>--%>
+    <SharePoint:CssRegistration ID="CssRegistration2" Name="<% $SPUrl:~sitecollection/Style Library/~language/Core Styles/controls.css %>"
+        runat="server" />
+    <SharePoint:CssRegistration ID="CssRegistration3" Name="<% $SPUrl:~SiteCollection/Style Library/zz1_blue.css%>"
+        runat="server" />
+    <SharePoint:CssRegistration ID="CssRegistration1" Name="<% $SPUrl:~SiteCollection/Style Library/CLIF/KCL/CSS/KCLMaster.CSS%>" runat="server" />
+        
+    <SharePoint:ScriptLink ID="ScriptLink1" Name="init.js" runat="server" />
+    
+    
+    <!--Placeholder for additional overrides-->
+    <asp:ContentPlaceHolder ID="PlaceHolderAdditionalPageHead" runat="server">
+    
+    </asp:ContentPlaceHolder>
+    
+    
+</head>
+<body class="body" onload="javascript:_spBodyOnLoadWrapper();">
+    <WebPartPages:SPWebPartManager ID="SPWebPartManager1" runat="server" />
+    <form id="Form1" runat="server" onsubmit="return _spFormOnSubmitWrapper();">
+    <table cellpadding="0" cellspacing="0" class="master">
+        <tr>
+            <td height="100%" class="shadowLeft">
+                <div class="spacer">
+                </div>
+            </td>
+            <td valign="top">
+                <table cellpadding="0" cellspacing="0" width="100%" class="masterContent">
+                    <tr style="height: 0px">
+                        <td>
+                            <wssuc:DesignModeConsole id="IdDesignModeConsole" runat="server" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="authoringRegion">
+                            <span class="siteActionMenu">
+                                <PublishingSiteAction:SiteActionMenu runat="server" />
+                            </span>
+                            <div class="sharepointLogin">
+                                <!--Authentication for Authors only-->
+                                <table cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td class="ms-globallinks">
+                                            <SharePoint:DelegateControl ID="DelegateControl1" ControlId="GlobalSiteLink1" Scope="Farm"
+                                                runat="server" />
+                                        </td>
+                                        <td class="ms-globallinks">
+                                            <SharePoint:DelegateControl ID="DelegateControl2" ControlId="GlobalSiteLink2" Scope="Farm"
+                                                runat="server" />
+                                        </td>
+                                        <td class="ms-globallinks">
+                                            <wssuc:Welcome id="explitLogout" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="console">
+                                <PublishingConsole:Console runat="server" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <table cellpadding="0" style="height: 80px; background-color: #F6F5F3" cellspacing="0"
+                                width="100%">
+                                <tr>
+                                    <td rowspan="2">
+                                        <div class="logo">
+                                            <br />
+                                            <a href="/">CLIF (Content Lifecycle Integration Framework)</a>
+                                        </div>
+                                    </td>
+                                    <td colspan="2">
+                                        <div class="topLinkBar">
+                                            <div class="topLink">
+                                                <PublishingVariations:VariationsLabelMenu id="labelmenu1" runat="server" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="bottom" width="100%">
+                                        <div class="topNav1">
+                                            <%--	<SharePoint:AspMenu ID="topNav1" Runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticDisplayLevels="1" MaximumDynamicDisplayLevels="0" ItemWrap="false" SkipLinkText="<%$Resources:cms,masterpages_skiplinktext%>" >
+											<StaticMenuItemStyle CssClass="topNav1Item" ItemSpacing="0"/>
+											<StaticSelectedStyle CssClass="topNav1Selected" ItemSpacing="0"/>
+											<StaticHoverStyle CssClass="topNav1Hover"/>
+										</SharePoint:AspMenu>--%>
+                                            <%--										<PublishingNavigation:PortalSiteMapDataSource ID="siteMapDataSource1" Runat="server"
+											SiteMapProvider="CombinedNavSiteMapProvider" EnableViewState="true"
+											StartFromCurrentNode="true" StartingNodeOffset="0" ShowStartingNode="false"
+											TreatStartingNodeAsCurrent="true" TrimNonCurrentTypes="Heading" />--%>
+                                            <%-- Left navigation and breadcrumb --%>
+                                            <publishingnavigation:portalsitemapdatasource runat="server" id="leftNavDataSource"
+                                                enableviewstate="false" sitemapprovider="CombinedNavSiteMapProvider" startfromcurrentnode="true"
+                                                startingnodeoffset="1" showstartingnode="true" treatstartingnodeascurrent="true"
+                                                trimnoncurrenttypes="None" />
+                                        </div>
+                                    </td>
+                                    <td valign="bottom">
+                                        <div class="search">
+                                           <asp:ContentPlaceHolder ID="PlaceHolderSearchArea" runat="server">
+                                                <SharePoint:DelegateControl ID="DelegateControl3" runat="server" ControlId="SmallSearchInputBox" />
+                                            </asp:ContentPlaceHolder>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="topNav2">
+                                <%--	<SharePoint:AspMenu ID="topNav2" Runat="server" DataSourceID="SiteMapDataSource2" Orientation="Horizontal" StaticDisplayLevels="1" MaximumDynamicDisplayLevels="0" SkipLinkText="<%$Resources:cms,masterpages_skiplinktext%>" >
+								<StaticMenuItemStyle CssClass="topNav2Item" ItemSpacing="0"/>
+								<StaticSelectedStyle CssClass="topNav2Selected" ItemSpacing="0"/>
+								<StaticHoverStyle CssClass="topNav2Hover"/>
+							</SharePoint:AspMenu>
+							<PublishingNavigation:PortalSiteMapDataSource ID="siteMapDataSource2" Runat="server"
+								SiteMapProvider="CombinedNavSiteMapProvider" EnableViewState="true"
+								StartFromCurrentNode="false" StartingNodeOffset="1" ShowStartingNode="false"
+								TrimNonCurrentTypes="Heading" />--%>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <table cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td width="100%">
+                                        <asp:ContentPlaceHolder ID="PlaceHolderTitleBreadcrumb" runat="server">
+                                            <div class="breadcrumb">
+                                                <asp:SiteMapPath ID="siteMapPath" runat="server" SiteMapProvider="CurrentNavSiteMapProviderNoEncode"
+                                                    RenderCurrentNodeAsLink="false" CurrentNodeStyle-CssClass="breadcrumbCurrent"
+                                                    NodeStyle-CssClass="ms-sitemapdirectional" />
+                                            </div>
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                    <td>
+                                        <asp:ContentPlaceHolder ID="PlaceHolderMiniConsole" runat="server" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarTop" runat="server" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server">
+                                <CLIFControls:LeftNav runat="server" ID="LeftNav" EnableViewState="false" DataSourceID="SiteMapDS"
+                                    Transform-XslName="LeftNav.xsl" IsLeftNavigation="True" />
+                                <publishingnavigation:portalsitemapdatasource id="SiteMapDS" runat="server" sitemapprovider="CurrentNavSiteMapProvider"
+                                    enableviewstate="true" startfromcurrentnode="true" startingnodeoffset="0" showstartingnode="false"
+                                    trimnoncurrenttypes="Heading" />
+                            </asp:ContentPlaceHolder>
+                            <asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderNavSpacer" runat="server">
+                                <div class="leftNavSpacer" />
+                            </asp:ContentPlaceHolder>
+                        </td>
+                        <td width="100%" valign="top">
+                            <div class="mainContainer" id="MSO_ContentDiv" runat="server">
+                                <div class="pageTitle">
+                                    <asp:ContentPlaceHolder ID="PlaceHolderPageTitleInTitleArea" runat="server" />
+                                </div>
+                                <div class="mainContent">
+                                    <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td height="100%" class="shadowRight">
+                <div class="spacer">
+                </div>
+            </td>
+        </tr>
+    </table>
+    <asp:Panel ID="Panel1" Visible="false" runat="server">
+        <asp:ContentPlaceHolder ID="PlaceHolderPageImage" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderBodyLeftBorder" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderTitleLeftBorder" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaSeparator" runat="server" />
+        <asp:ContentPlaceHolder ID="OSSConsole" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderTitleRightMargin" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderPageDescription" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderBodyAreaClass" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaClass" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderBodyRightMargin" runat="server" />
+    </asp:Panel>
+    </form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature
+	Id="67327d7a-bd68-4fa4-af41-268a69f7fb1f"
+	Title="CLIF.PageLayouts"
+	Description="Activating this feature adds CLIF.PageLayouts."
+	Version="12.0.0.0"
+	ImageUrl="kpinormal-0.gif"
+	Hidden="FALSE"
+	Scope="Site"
+  ReceiverAssembly="CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd"
+  ReceiverClass="CLIF.Solutions.Code.Pages"
+	DefaultResourceFile="core" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest
+			Location="elements.xml" />
+		<ElementFile
+			Location="Files/SearchResult.aspx" />		
+	</ElementManifests>  
+</Feature>

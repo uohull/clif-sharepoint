@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ContentType 
+    ID="0x0100B4154F9A9A1B2244AC0B2070704ECE6E" 
+    Name="Archive" 
+    Group="CLIF.Solutions"    
+    Version="4" 
+    >
+    <FieldRefs>
+      <FieldRef ID="{c042a256-787d-4a6f-8a8a-cf6ab767f12d}" Name="ContentType" />
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="TRUE" ShowInNewForm="TRUE" ShowInEditForm="TRUE" />
+      <FieldRef ID="{58D4AC81-108A-4e5d-8F66-69E83D21B83E}" Name="Persistent_x0020_ID" Required="FALSE" />
+      <FieldRef ID="{0913aaeb-2c2f-4f8a-8941-44f393f8ddc3}" Name="Document_x0020_Library" Required="FALSE" />
+
+      <FieldRef ID="{2E6D337D-7ED7-4f7e-BD6E-9F59FF07089A}" Name="Content_x0020_Subject" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{B75077E9-55AF-46ec-92B9-3964232BD1BC}" Name="Document_x0020_Author" Required="FALSE" DisplayName="Document Author(s)" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+      <FieldRef ID="{CF1B58C9-1158-449f-AF73-DEE726F249BE}" Name="Content_x0020_MimeType" Required="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE" />
+      <FieldRef ID="{0214140E-510B-49dd-BFF6-E0A53D365CB7}" Name="Content_x0020_Coverage" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+    </FieldRefs>
+  </ContentType>
+  
+</Elements>

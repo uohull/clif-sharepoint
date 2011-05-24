@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="39c0b5e6-9591-4854-b09e-f72f70c565c2"
+          Title="CLIF.AddRepositoryUsers"
+          Description="This feature added new users to the fedora server."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Web"
+          DefaultResourceFile="core"
+          ImageUrl="kpinormal-0.gif"
+	        ReceiverAssembly="CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd"
+	        ReceiverClass="CLIF.Solutions.Code.AddRepositoryUsers" 
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+</Feature>

@@ -1,0 +1,127 @@
+<%@ Master Language="C#" %>
+
+<%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls"
+    Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Import Namespace="Microsoft.SharePoint.ApplicationPages" %>
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="PlaceHolderPageTitle" runat="server" />
+    </title>
+    <SharePoint:CssLink ID="CssLink1" runat="server" Alternate="false" />
+    <SharePoint:ScriptLink ID="ScriptLink1" Language="javascript" Name="core.js" runat="server" />
+    <link rel="stylesheet" type="text/css" href="~/Style%20Library/CLIF/KCL/CSS/Basic.css" runat="server" />
+    
+    <!-- Ajax Script files-->
+    <link href="/_layouts/CLIFPages/Styles/treeview.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/_layouts/CLIFPages/JS/ajax.js"></script>    
+    <script type="text/javascript" src="/_layouts/CLIFPages/Proxies/GetJavaScriptProxy.aspx?service=treeview.asmx"></script>
+    <script language="JavaScript" type="text/javascript">
+
+function refreshParent() 
+{
+    window.opener.location.href = window.opener.location.href;
+    if (window.opener.progressWindow)
+    {
+        window.opener.progressWindow.close()
+    }
+    window.close();
+}
+function createInput()
+{
+    var input = document.createElement('input');
+    input.type = 'text';
+    input.value = '';
+    input.onclick = function()
+    {
+        alert("a");
+    }
+    document.getElementById("").appendChild(input);
+}
+
+function CallAddObjectService() 
+{   
+    var parentId = document.getElementById("lblSelectPID").innerText;    
+    var answer = confirm ("Are you sure you want to add new Object/Folder under " + parentId + "?")
+    if (answer)
+    {       
+        var _objectName = prompt("Please enter new object name:", "Type here");
+        var _pidFormat=document.getElementById("ctl00_PlaceHolderMain_hdnPIDFormat").value;
+        var _labelFormat=document.getElementById("ctl00_PlaceHolderMain_hdnLabelFormat").value;
+        var _namespaceFormat=document.getElementById("ctl00_PlaceHolderMain_hdnNamespaceFormat").value;
+       
+        //Calling the Service Method
+        CLIF.Solutions.Code.HydranetService.AddContentObject(_objectName,parentId,_pidFormat,_namespaceFormat,_labelFormat,OnSuccess, OnFailed);     
+    }    
+}
+    
+function OnSuccess(e) 
+{     
+  alert("Object added sucessfully !");     
+  window.location.href=window.location.href;     
+}
+function OnFailed() 
+{
+    alert("Sorry, unable to add new Object/Folder, please contact your system administrator.");    
+}
+
+function CallGetObjectFiles() 
+{ 
+   var Pid = document.getElementById("lblSelectPID").innerText;
+   clearlistbox(document.getElementById("ctl00_PlaceHolderMain_lstFiles"));
+   //Calling the Service Method
+   CLIF.Solutions.Code.HydranetService.GetContentObjectFiles(Pid,OnSuccessFiles, OnFailedFiles);           
+}
+
+function OnSuccessFiles(result)
+{   
+    for (var i = 0; i < result.length; i++) 
+    {
+       AddItem(result[i]["Label"]);
+    }
+}
+
+function clearlistbox(lb)
+{
+  for (var i=lb.options.length-1; i>=0; i--){
+    lb.options[i] = null;
+  }
+  lb.selectedIndex = -1;
+}
+
+function AddItem(Text,Value)
+{
+        // Create an Option object        
+
+        var opt = document.createElement("option");
+
+        // Add an Option object to Drop Down/List Box
+        document.getElementById("ctl00_PlaceHolderMain_lstFiles").options.add(opt);
+
+        // Assign text and value to Option object
+        opt.text = Text;
+        opt.value = Value;
+}
+function OnFailedFiles() 
+{
+    alert("Sorry, unable to add new Object/Folder, please contact your system administrator.");    
+}
+</script>
+
+
+</head>
+<body>
+    
+    <form id="frmMaster" runat="server">
+
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+        <services>
+        <asp:ServiceReference Path="HydranetService.asmx"   InlineScript="true"/>
+    </services>
+    </asp:ScriptManager>
+    <div align="center" style="width:97%">
+        <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
+    </div>   
+    </form>
+</body>
+</html>

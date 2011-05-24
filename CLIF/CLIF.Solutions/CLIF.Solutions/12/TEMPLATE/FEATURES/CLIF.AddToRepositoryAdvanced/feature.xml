@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="4121e171-e1bf-4f87-bae5-76b9a0dd9672"
+          Title="CLIF.Publish Document(Advanced)"
+          Description="Activating this feature adds form template and advanced option to add files to the repository."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Site"
+          ImageUrl="kpinormal-0.gif"
+          DefaultResourceFile="core"
+          ReceiverClass="Microsoft.Office.InfoPath.Server.Administration.XsnFeatureReceiver"
+          ReceiverAssembly="Microsoft.Office.InfoPath.Server, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>
+    <ElementFile Location="Mods.xsn"/>
+  </ElementManifests>
+</Feature>

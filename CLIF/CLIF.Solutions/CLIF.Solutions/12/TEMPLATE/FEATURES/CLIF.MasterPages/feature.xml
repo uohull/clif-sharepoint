@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature
+	Id="7306b8a0-7490-4bfc-9756-9b0a31d5065c"
+	Title="CLIF.MasterPages"
+	Description="Description for CLIF.MasterPages"
+	Version="12.0.0.0"
+	Hidden="FALSE"
+	Scope="Site"
+	DefaultResourceFile="core"
+	ImageUrl="kpinormallarge-0.gif"
+	ReceiverAssembly="CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd"
+	ReceiverClass="CLIF.Solutions.Code.SiteMasterPage" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest
+			Location="elements.xml" />
+		<ElementFile
+			Location="Files/KCL.master" />
+	</ElementManifests>
+	<Properties>
+		<Property
+			Key="MasterPageFile"
+			Value="CLIF/KCL/KCL.Master" />
+	</Properties>
+</Feature>

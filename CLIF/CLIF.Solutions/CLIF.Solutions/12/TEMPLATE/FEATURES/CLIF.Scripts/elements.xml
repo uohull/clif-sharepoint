@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Module
+		Name="Scripts"
+		Url="Style Library/CLIF/KCL/Scripts"
+		Path="Files"
+		RootWebOnly="TRUE">
+		<File
+			Url="AjaxTreeView.js"
+			Type="GhostableInLibrary"
+			IgnoreIfAlreadyExists="TRUE" />
+		<File
+			Url="jcl.js"
+			Type="GhostableInLibrary"
+			IgnoreIfAlreadyExists="TRUE" />
+		<File
+			Url="jquery-1.3.2.js"
+			IgnoreIfAlreadyExists="TRUE"
+			Type="GhostableInLibrary" />
+		<File
+			Url="ajax.js"
+			Type="GhostableInLibrary"
+			IgnoreIfAlreadyExists="TRUE" />
+		<File
+			Url="jquery-1.3.2-vsdoc2.js"
+			Type="GhostableInLibrary"
+			IgnoreIfAlreadyExists="TRUE" />
+	</Module>
+</Elements>

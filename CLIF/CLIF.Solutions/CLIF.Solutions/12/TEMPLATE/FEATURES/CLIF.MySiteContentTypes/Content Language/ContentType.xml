@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ContentType 
+    ID="0x0100513324DE756A43e0AEB1036B71BC2578" 
+    Name="Content Language" 
+    Group="CLIF.Solutions" Version="4">
+    <Folder TargetName="Content Language" />
+    <FieldRefs>
+      <FieldRef ID="{c042a256-787d-4a6f-8a8a-cf6ab767f12d}" Name="ContentType" />
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="TRUE" DisplayName="Title" />     
+    </FieldRefs>
+  </ContentType>
+
+</Elements>

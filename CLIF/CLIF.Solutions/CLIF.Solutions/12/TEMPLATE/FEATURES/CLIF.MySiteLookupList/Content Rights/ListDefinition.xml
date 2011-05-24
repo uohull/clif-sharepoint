@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="1cca6ca8-3ec5-4c1c-95af-4357eeed1e15" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate
+    Name="Content Rights"
+    DisplayName="Content Rights"
+    Description=""
+    NoCrawl="TRUE"
+    BaseType="0"
+    Type="200015"
+    OnQuickLaunch="TRUE"
+    SecurityBits="11"
+    Sequence="410"
+    Image="/_layouts/images/itgen.gif" />
+  <ListInstance
+     Title="Content Rights"
+     Description="Content Rights List"
+     Id="300015"
+     TemplateType="200015"
+     Url="Lists/ContentRights"
+     OnQuickLaunch="FALSE"
+     FeatureId="0a41aa11-9357-4353-b2c3-512525a3bcee">
+  </ListInstance>
+</Elements>

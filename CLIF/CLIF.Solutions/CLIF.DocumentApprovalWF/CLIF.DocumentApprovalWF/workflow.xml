@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Workflow
+     Name="CLIF.DocumentApprovalWorkflow"
+     Description="This workflow handles document approval process."
+     Id="51d62087-34c8-4a38-82d8-93ebe8f0c894"
+     CodeBesideClass="CLIF.DocumentApprovalWF.DAF"
+     CodeBesideAssembly="CLIF.DocumentApprovalWF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5c493be815f5c990"
+     TaskListContentTypeId="0x01080100C9C9515DE4E24001905074F980F93160"
+     StatusUrl="_layouts/CLIFPages/WrkStat.aspx"
+     AssociationUrl="_layouts/CstWrkflIP.aspx"
+     > 
+    <Categories/>
+    <MetaData>
+      <Association_FormURN>urn:schemas-microsoft-com:office:infopath:CLIF-DocumentApproval-AssociationForm:-myXSD-2011-03-17T12-14-04</Association_FormURN>
+      <Task0_FormURN>urn:schemas-microsoft-com:office:infopath:CLIF-DocumentApproval-TaskEditForm:-myXSD-2011-02-03T11-15-58</Task0_FormURN>
+      <StatusUrl>_layouts/CLIFPages/WrkStat.aspx</StatusUrl>
+    </MetaData>
+  </Workflow>
+</Elements>

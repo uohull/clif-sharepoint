@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+X=====================================================================X
+Title:              CLIF.ContentTypes
+Author:             Suresh Thampi
+Project:            CLIF.Solutions
+Date:               04/11/2010
+Copyright:          © Center for e-research(CeRch), 
+                    King's College London 2010 All Rights Reserved.
+Description:        Activating this feature creates CLIF Content Types.
+X=====================================================================X
+-->
+<Feature  Id="7d7aefc4-8494-4ce7-875a-ff08212dd403"
+          Title="CLIF.ContentTypes"
+          Description="Activating this feature adds CLIF content types."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Site"
+          ImageUrl="kpinormallarge-0.gif"
+          DefaultResourceFile="core"           
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  
+  <ElementManifests>    
+    
+    <!--Repository Operation Log-->
+    <ElementManifest Location="Repository Operation Log\ContentType.xml"/>
+    
+    <!--MySite Repository Setting-->
+    <ElementManifest Location="MySite Repository Setting\ContentType.xml"/>
+
+    <!--Publishable Locations-->
+    <ElementManifest Location="Publishable Locations\ContentType.xml"/>
+
+    <!--Repository Config Files-->
+    <ElementManifest Location="Repository Config Files\ContentType.xml"/>
+
+    <!--Document Approval Task-->
+    <ElementManifest Location="Document Approval Task\ContentType.xml"/>
+
+
+
+  </ElementManifests>
+  
+  <ActivationDependencies>    
+    <!--Depends On CLIF.Fields-->
+    <ActivationDependency FeatureId="8fcd6181-9fbd-49ad-9983-a6f483ceb4c6"/>    
+  </ActivationDependencies>
+</Feature>

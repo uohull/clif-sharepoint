@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  
+  <ContentType 
+    ID="0x010026DEFF1E07FFA04BB3E049CC57F54C42" 
+    Name="Repository Config Files" 
+    Group="CLIF.Solutions">
+    <FieldRefs>
+      <FieldRef ID="{c042a256-787d-4a6f-8a8a-cf6ab767f12d}" Name="ContentType" />
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="TRUE" ShowInNewForm="TRUE" ShowInEditForm="TRUE" />
+      <FieldRef ID="{8c5bf9b7-0921-487e-ac21-6605854025bf}" Name="File_x0020_Path" Required="FALSE" />
+    </FieldRefs>
+    <Folder TargetName="Repository Config Files" />
+  </ContentType>
+  
+</Elements>

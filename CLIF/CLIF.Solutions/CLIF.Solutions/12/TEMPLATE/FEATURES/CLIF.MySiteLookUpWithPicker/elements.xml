@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements
+  xmlns="http://schemas.microsoft.com/sharepoint/"
+  xmlns:LookUp="http://schemas.grepton.com/sharepoint/">
+
+  <!-- [Project Title] Field Def-->
+  <Field
+    Type="LookupFieldWithPicker"
+    ID="{347591C9-BA2F-4966-9D9D-8B5BFEA6D0B5}"
+    DisplayName="Project Title"
+    Required="TRUE"
+    List="Projects"
+    ShowField="Title"
+    Mult="FALSE"
+    Sortable="FALSE"
+    UnlimitedLengthInDocumentLibrary="FALSE"
+    Group="CLIF.Solutions"
+    Description="Please select project from the list"
+    StaticName="Project_x0020_Title"
+    Name="Project_x0020_Title"
+    LookUp:ContentTypes="Project Document|Project Title|2,Archive|Project Title|2"
+    
+    LookUp:ListName="Projects"
+    LookUp:ListField="Title"
+    LookUp:SearchFields="Title"
+    LookUp:EntityEditorRows="1"
+    LookUp:LookupWebId="{LookupWebId}"
+  />
+  <!-- [Content Languages] Field Def-->
+  <Field
+    Type="LookupFieldWithPicker"
+    ID="{D8538C13-F3EA-4935-B7EB-7CC8AF653EE9}"
+    DisplayName="Content Language(s)"
+    Required="FALSE"
+    List="Content Languages"
+    ShowField="Title"
+    Mult="TRUE"
+    Sortable="FALSE"
+    UnlimitedLengthInDocumentLibrary="FALSE"
+    Group="CLIF.Solutions"
+    Description="Please select content lanaguage(s)"
+    StaticName="Content_x0020_Languages"
+    Name="Content_x0020_Languages"
+    LookUp:ContentTypes="Project Document|Content Language|8"
+    
+    LookUp:ListName="Content Languages"
+    LookUp:ListField="Title"
+    LookUp:SearchFields="Title"
+    LookUp:EntityEditorRows="1"
+    LookUp:LookupWebId="{LookupWebId}"
+  />
+
+  <!-- [Content Sources] Field Def-->
+  <Field
+    Type="LookupFieldWithPicker"
+    ID="{9D1BD2A7-4049-4ee7-8227-AC7F67C4B34E}"
+    DisplayName="Content Source(s)"
+    Required="FALSE"
+    List="Content Sources"
+    ShowField="Title"
+    Mult="TRUE"
+    Sortable="FALSE"
+    UnlimitedLengthInDocumentLibrary="FALSE"
+    Group="CLIF.Solutions"
+    Description="Please select content sources"
+    StaticName="Content_x0020_Sources"
+    Name="Content_x0020_Sources"
+    LookUp:ContentTypes="Project Document|Content Source|9"
+    
+    LookUp:ListName="Content Sources"
+    LookUp:ListField="Title"
+    LookUp:SearchFields="Title"
+    LookUp:EntityEditorRows="1"
+    LookUp:LookupWebId="{LookupWebId}"
+  />
+  <!-- [Content Rights ] Field Def-->
+  <Field
+    Type="LookupFieldWithPicker"
+    ID="{9D1BD2A7-4049-4ee7-8227-AC7F67C4B34E}"
+    DisplayName="Content Right(s)"
+    Required="FALSE"
+    List="Content Rights"
+    ShowField="Title"
+    Mult="TRUE"
+    Sortable="FALSE"
+    UnlimitedLengthInDocumentLibrary="FALSE"
+    Group="CLIF.Solutions"
+    Description="Please select content rights"
+    StaticName="Content_x0020_Rights"
+    Name="Content_x0020_Sources"
+    LookUp:ContentTypes="Project Document|Content Right|9"
+    
+    LookUp:ListName="Content Rights"
+    LookUp:ListField="Title"
+    LookUp:SearchFields="Title"
+    LookUp:EntityEditorRows="1"
+    LookUp:LookupWebId="{LookupWebId}"
+  />
+
+</Elements>

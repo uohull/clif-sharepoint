@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+***************************************************************************
+Created On: 07/01/2010
+Created By: Suresh Thampi
+==========================================================================
+Description:
+This feature adds 'Retrieve File From Archive' ECB menu to custom document library
+***************************************************************************
+-->
+<Feature  Id="14837efe-5a93-43ff-951f-b96cd2f959f4"
+          Title="CLIF.RetrieveFromArchive"
+          Description="Activating this feature adds ECBMenu to retrieve files from the repository."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Web"
+          ImageUrl="kpinormal-0.gif"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+</Feature>

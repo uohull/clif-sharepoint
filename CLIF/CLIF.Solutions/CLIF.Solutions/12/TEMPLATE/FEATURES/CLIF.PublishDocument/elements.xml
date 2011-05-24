@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="CLIF.PublishDocument"
+   RegistrationType="ContentType"
+   RegistrationId="0x010100132D74E474FA4309A1777FEBED2BCE29"
+   Location="EditControlBlock"
+   Title="Publish Document"
+   Sequence="102"
+   ImageUrl="_layouts/images/SENDTO.gif">
+    <UrlAction Url="javascript:window.location.href='{SiteUrl}/_layouts/clifpages/PublishDocument.aspx?List={ListId}&amp;ID={ItemId}&amp;SourceURL=' + window.location;window.event.returnValue = false;"/>
+  </CustomAction>
+
+  <CustomAction
+      Id="CLIF.PublishDocument"
+      Title="Publish Document"
+      Sequence="0"
+      ImageUrl="_layouts/images/SENDTO.gif"
+      Rights="AddListItems"
+      Location="DisplayFormToolbar"
+      Description="This will creates a new 'Publish Document' button."
+      RegistrationId="0x010100132D74E474FA4309A1777FEBED2BCE29"
+      RegistrationType="ContentType">
+    <UrlAction Url="javascript:window.location.href='{SiteUrl}/_layouts/clifpages/PublishDocument.aspx?List={ListId}&amp;ID={ItemId}&amp;SourceURL=' + window.location;window.event.returnValue = false;"/>
+  </CustomAction>
+</Elements>

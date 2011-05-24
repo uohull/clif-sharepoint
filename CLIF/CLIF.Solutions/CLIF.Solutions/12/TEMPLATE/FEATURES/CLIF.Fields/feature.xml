@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+X=====================================================================X
+Title:              CLIF.Fields
+Author:             Suresh Thampi
+Project:            CLIF.Solutions
+Date:               04/11/2010
+Copyright:          © Center for e-research(CeRch), 
+                    King's College London 2010 All Rights Reserved.
+Description:        Activating this feature creates CLIF fields.
+X=====================================================================X
+-->
+<Feature  Id="8fcd6181-9fbd-49ad-9983-a6f483ceb4c6"
+          Title="CLIF.Fields"
+          Description="Creates CLIF fields in the site collection."
+          Version="12.0.0.0"
+          ImageUrl="kpinormallarge-0.gif"
+          Hidden="FALSE"
+          Scope="Site"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="fields.xml"/>    
+  </ElementManifests>
+</Feature>

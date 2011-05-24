@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+X=====================================================================X
+Title:              CLIF.MySiteStapler
+Author:             Suresh Thampi
+Project:            CLIF.Solutions
+Date:               04/11/2010
+Copyright:          © Center for e-research(CeRch), 
+                    King's College London 2010 All Rights Reserved.
+Description:        Activating this feature staples CLIF.MySite feature to MySite site template.
+X=====================================================================X
+-->
+<Feature
+	Id="59B67A46-075B-4876-A06C-0D196CE30910" xmlns="http://schemas.microsoft.com/sharepoint/"
+	Title="CLIF.MySiteStapler"
+	Scope="Farm"
+	Hidden="False"
+  ImageUrl="kpinormal-0.gif"
+	Description="This feature staples custom features to MySite template.">
+	<ElementManifests>
+		<ElementManifest
+			Location="Elements.xml" />
+	</ElementManifests>	
+</Feature>

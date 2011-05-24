@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Module
+		Name="CLIF.KCL.MASTERPAGES"
+		Url="_catalogs/masterpage/CLIF/KCL"
+		Path="FILES">
+		<File
+			Url="KCL_MySite.master"
+			IgnoreIfAlreadyExists="TRUE"
+			Type="GhostableInLibrary">
+			<Property
+				Name="ContentType"
+				Value="Master Page" />
+			<Property
+				Name="PublishingPreviewImage"
+				Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/BlueBand.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/BlueBand.png" />
+			<Property
+				Name="MasterPageDescription"
+				Value="MySite Master page for Kings College London." />
+		</File>
+	</Module>
+</Elements>

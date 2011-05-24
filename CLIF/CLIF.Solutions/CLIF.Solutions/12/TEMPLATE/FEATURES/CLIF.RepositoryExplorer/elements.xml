@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="CLIF.RepositoryExplorer"
+ GroupId="SiteActions"
+ Location="Microsoft.SharePoint.StandardMenu"
+ Title="Repository Explorer"
+ Description="Allows to view repository explorer"
+ Sequence="102"
+ ImageUrl="_layouts/images/SEARCH.gif">
+    <UrlAction Url="javascript:var site='{SiteUrl}';var list='{ListId}';var ret=window.open(site + '/_layouts/clifpages/repositoryexplorer.aspx?list='+ list,'printwindow','scollbars=1,resizable=1,height=750,width=700');"/>
+  </CustomAction>
+</Elements>

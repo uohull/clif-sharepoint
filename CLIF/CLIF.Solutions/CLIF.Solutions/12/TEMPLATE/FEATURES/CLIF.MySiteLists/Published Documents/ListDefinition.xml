@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="28ffb76b-47ba-4b2f-b6e9-c2fc30198d6f" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate
+   Name="Published Documents"
+   DisplayName="Project Documents"
+   Description="Create a Published document library for projects."
+   BaseType="0"
+   Type="200016"
+   OnQuickLaunch="TRUE"
+   SecurityBits="11"
+   Sequence="110"
+   Image="/_layouts/images/icon_document.gif"
+   />
+  <ListInstance
+    Title="Published Documents"
+    Description="Use this Published document library to store personal project documents."
+    Id="300017"
+    TemplateType="200016"
+    Url="Lists/Published Documents"
+    OnQuickLaunch="TRUE"
+    FeatureId="d470b616-efad-493f-a8d4-6ca9f51ad97f">
+  </ListInstance>
+  
+</Elements>

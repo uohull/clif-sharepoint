@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ContentType
+      ID="0x010801006840D244B10E48bc8B5842CAEE6CE208"
+      Name="Approval Workflow ContentType"
+      Group="CLIF.Solutions">
+    <FieldRefs>
+      <FieldRef ID="{581FA709-55F7-45bf-8A59-99D5BB9DC7AB}" Required="FALSE" Name="Approvers_x0020_Note" ShowInDisplayForm="TRUE" ShowInEditForm="TRUE" DisplayName="Approver's Notes" />
+    </FieldRefs>
+  </ContentType>
+  
+</Elements>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="cb16a1ba-fe7e-419d-96bd-f0a5741787d6" xmlns="http://schemas.microsoft.com/sharepoint/">
+  
+  <ListInstance
+    Title="Tasks"
+    Description="Creates document approval list for the approval workflow." 
+    Id="30011"
+    TemplateType="107"
+    Url="Lists/DocumentApprovalTasks"
+    OnQuickLaunch="TRUE" FeatureId="00BFEA71-A83E-497E-9BA0-7A5C597D0107" >
+  </ListInstance>
+  
+</Elements>

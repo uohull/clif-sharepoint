@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="CLIF.BulkCopy"   
+   GroupId="SiteActions"
+   Location="Microsoft.SharePoint.StandardMenu"                
+   Title="Copy Multiple Files"
+   Description="Copies multitple file(s) to the repository"
+   Sequence="102"
+   ImageUrl="_layouts/images/COPY.gif">
+    <UrlAction Url="javascript:var site='{SiteUrl}';var list='{ListId}';var ret=window.open(site + '/_layouts/clifpages/bulkcopy.aspx?move=0&amp;list='+ list,'printwindow','scollbars=1,resizable=1,height=650,width=600');"/>
+  </CustomAction>
+</Elements>

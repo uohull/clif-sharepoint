@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="CLIF.RetrieveFile"
+   RegistrationType="ContentType"
+   RegistrationId="0x0100B4154F9A9A1B2244AC0B2070704ECE6E"
+   Location="DisplayFormToolbar"
+   Title="Retrieve From Archive"
+   Sequence="102"
+   ImageUrl="_layouts/images/lg_ICONGO.gif">
+    <UrlAction Url="javascript:var site='{SiteUrl}';var list='{ListId}';var item='{ItemId}';var ItemUrl='{ItemUrl}';var view=ctx.view;var ret=window.open(site + '/_layouts/clifpages/ImportFromRepository.aspx?list='+ list + '&amp;item=' + item,'printwindow','scollbars=1,resizable=1,height=650,width=600');"/>
+  </CustomAction>
+
+  <CustomAction Id="CLIF.RetrieveFile"
+    RegistrationType="ContentType"
+    RegistrationId="0x0100B4154F9A9A1B2244AC0B2070704ECE6E"
+    Location="EditControlBlock"
+    Title="Retrieve From Archive"
+    Sequence="102"
+    ImageUrl="_layouts/images/lg_ICONGO.gif">
+    <UrlAction Url="javascript:var site='{SiteUrl}';var list='{ListId}';var item='{ItemId}';var ItemUrl='{ItemUrl}';var view=ctx.view;var ret=window.open(site + '/_layouts/clifpages/ImportFromRepository.aspx?list='+ list + '&amp;item=' + item,'printwindow','scollbars=1,resizable=1,height=650,width=600');"/>
+  </CustomAction>
+</Elements>

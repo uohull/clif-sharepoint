@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+  <!--Staples MySite feature to MySite site template-->
+  <FeatureSiteTemplateAssociation Id="F356F835-33D8-424A-87AF-0CB31823C6CC" TemplateName="SPSPERS#0"/>
+
+  <!--Staples CLIF.MySiteFields-->
+  <FeatureSiteTemplateAssociation Id="2af54365-9ac1-4646-ab6c-8907f0905e78" TemplateName="SPSPERS#0"/>
+
+  <!--Staples CLIF.MySiteContentTypes-->
+  <FeatureSiteTemplateAssociation Id="a6461fd9-bc23-458b-91b7-1ad499e14033" TemplateName="SPSPERS#0"/>
+
+  <!--Staples CLIF.MySiteLookupList-->
+  <FeatureSiteTemplateAssociation Id="0a41aa11-9357-4353-b2c3-512525a3bcee" TemplateName="SPSPERS#0"/>
+
+  <!--Staples CLIF.MySiteLookUpWithPicker-->
+  <FeatureSiteTemplateAssociation Id="640d3ace-0fcf-45ef-acc9-89b68619266f" TemplateName="SPSPERS#0"/>
+
+  <!--Staples CLIF.MySiteLists-->
+  <FeatureSiteTemplateAssociation Id="d470b616-efad-493f-a8d4-6ca9f51ad97f" TemplateName="SPSPERS#0"/>
+  
+  <!--Staples CLIF.ProjectDocumentsItemEventReceiver-->
+  <FeatureSiteTemplateAssociation Id="4e44b11a-a028-4602-98c4-371acc568b66" TemplateName="SPSPERS#0"/>
+
+  <!--Staples CLIF.AddToRepository-->
+  <FeatureSiteTemplateAssociation Id="1a26cba3-5073-4fec-b3be-29724d43d9d3" TemplateName="SPSPERS#0"/>
+
+  <!--Staples CLIF.Archive-->
+  <FeatureSiteTemplateAssociation Id="f9b0c9e4-7263-4f6d-8900-ba93a700fa79" TemplateName="SPSPERS#0"/>
+
+  <!--Staples CLIF.RetrieveFromArchive-->
+  <FeatureSiteTemplateAssociation Id="14837efe-5a93-43ff-951f-b96cd2f959f4" TemplateName="SPSPERS#0"/>
+
+  <!--Staples CLIF.ConfigureDocumentLibrary-->
+  <FeatureSiteTemplateAssociation Id="e61c82eb-e83b-4909-9bca-1a5ae6967c45" TemplateName="SPSPERS#0"/>
+
+  <!--Staples CLIF.ShareThisDocument-->
+  <FeatureSiteTemplateAssociation Id="d27a801f-875f-4ba4-8092-6e20983d312e" TemplateName="SPSPERS#0"/>
+
+  <!--Staples CLIF.PublishDocument-->
+  <FeatureSiteTemplateAssociation Id="4bb5c19b-2046-4ed3-817f-2b7866b9fa10" TemplateName="SPSPERS#0"/>
+  
+  <!--Staples CLIF.BulkCopy-->
+  <FeatureSiteTemplateAssociation Id="3a173654-a6d1-44f2-ac5b-87b629d6a17c" TemplateName="SPSPERS#0"/>
+
+  <!--Staples CLIF.BulkMove-->
+  <FeatureSiteTemplateAssociation Id="c4ee6da7-7743-4aa1-94fa-0df74b70b91e" TemplateName="SPSPERS#0"/>
+
+  <!--Staples CLIF.DocumentApprovalWorkflow-->
+  <FeatureSiteTemplateAssociation Id="2095305b-9340-4680-9c6f-7dcbd4709e99" TemplateName="SPSPERS#0"/>
+  
+  <!--Staples CLIF.AddToRepositoryAdvanced-->
+  <!--<FeatureSiteTemplateAssociation Id="4121e171-e1bf-4f87-bae5-76b9a0dd9672" TemplateName="SPSPERS#0"/>-->
+
+  <!--Staples CLIF.Search-->
+  <FeatureSiteTemplateAssociation Id="c683eef0-a0d9-479d-886c-bf6ae02817ee" TemplateName="SPSPERS#0"/>
+
+  <!--Staples CLIF.RepositoryExplorer-->
+  <FeatureSiteTemplateAssociation Id="f65c4d96-55bd-48b4-bf58-e5eab8cebdc6" TemplateName="SPSPERS#0"/>
+
+  
+</Elements>

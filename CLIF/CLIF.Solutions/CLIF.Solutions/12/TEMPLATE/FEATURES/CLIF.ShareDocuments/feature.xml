@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="6c067091-3cfe-442e-a26c-45310b196dfd"
+          Title="CLIF.ShareDocuments"
+          Description="This feature adds an ECB menu to all document list libraries."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Web"
+          DefaultResourceFile="core"
+          ImageUrl="kpinormal-0.gif"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+</Feature>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Elements Id="7E8DAF99-9D79-4147-8AE7-EF631DCAF20E" xmlns="http://schemas.microsoft.com/sharepoint/">
+  
+  <!--Repository List Settings-->
+  <ListTemplate
+    Name="MySite Repository Settings" 
+    DisplayName="MySite Repository Settings" 
+    BaseType="0" 
+    Type="20003" 
+    OnQuickLaunch="TRUE" 
+    SecurityBits="11" 
+    Sequence="410" 
+    Image="/_layouts/images/itgen.gif" />
+  
+  <ListInstance
+       Title="MySite Repository Settings"
+       Description="MySite Repository Settings List"
+       Id="30003"
+       TemplateType="20003"
+       Url="Lists/MySiteRepositorySettings"
+       OnQuickLaunch="TRUE"
+       FeatureId="59d73371-02cb-4b45-a203-cd7e4904f27b">    
+  </ListInstance>
+  <!--End Repository List Settings-->   
+  
+</Elements>

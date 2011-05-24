@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/"> 
+ <Control
+     Id="SmallSearchInputBox"
+     Sequence="24"
+     ControlClass="Microsoft.SharePoint.Portal.WebControls.SearchBoxEx"
+     ControlAssembly="Microsoft.SharePoint.Portal, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+    <Property Name="SearchResultPageURL">/_layouts/CLIFPages/searchresults.aspx</Property>
+    <Property Name="FrameType">None</Property>
+    <Property Name="DropDownMode">HideDD_NoScope</Property>
+    <Property Name="TextBoxWidth">140</Property>
+    <Property Name="ShowAdvancedSearch">false</Property>
+  </Control>
+</Elements>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+  <!--KCL CSS Files-->
+  <Module Name="CLIF.KCL.CSS" Url="Style Library/CLIF/KCL/CSS"  Path="KCL/CSS" RootWebOnly="TRUE">
+    <File Url="KCLMaster.CSS" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary"/>
+    <File Url="Basic.CSS" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary"/>
+    <File Url="OverrideCORE.CSS" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary"/>
+  </Module>
+</Elements>

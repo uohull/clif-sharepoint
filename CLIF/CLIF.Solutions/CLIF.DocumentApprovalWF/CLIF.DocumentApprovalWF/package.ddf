@@ -1,0 +1,15 @@
+;
+.OPTION EXPLICIT                     ; Generate errors
+.Set CabinetNameTemplate=CLIF.DocumentApprovalWF.wsp
+.Set CompressionType=MSZIP           ; All files are compressed in cabinet files
+.set DiskDirectoryTemplate=CDROM     ; All cabinets go in a single directory
+.Set UniqueFiles="ON"
+.Set Cabinet=on
+.Set DiskDirectory1=C:\Work\CLIF\CLIF.Solutions\CLIF.DocumentApprovalWF\CLIF.DocumentApprovalWF 
+"manifest.xml" "manifest.xml"
+"workflow.xml" "CLIF.DocumentApprovalWF\workflow.xml"
+"feature.xml" "CLIF.DocumentApprovalWF\feature.xml"
+"Forms\CLIF_DocumentApproval_TaskEditForm.xsn" "CLIF.DocumentApprovalWF\Forms\CLIF_DocumentApproval_TaskEditForm.xsn"
+"bin\Debug\CLIF.DocumentApprovalWF.dll" "CLIF.DocumentApprovalWF\CLIF.DocumentApprovalWF.dll"
+
+;

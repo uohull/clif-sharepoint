@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="10c19a31-9710-42d9-a1f2-4ac3f4aabb2d"
+          Title="CLIF.LookUpWithPicker"
+          Description="This feature handles loopup with picker control."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Site"
+          ImageUrl="kpinormallarge-0.gif"    
+          DefaultResourceFile="core"
+          ReceiverAssembly="CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd"
+          ReceiverClass="CLIF.Solutions.Code.LookUpWithPickerFields"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+  <Properties>
+    <Property Key="XmlFields" Value="elements.xml"/>
+  </Properties>
+</Feature>

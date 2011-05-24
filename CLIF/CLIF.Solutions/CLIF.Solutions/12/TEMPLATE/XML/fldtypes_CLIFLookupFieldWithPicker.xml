@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FieldTypes>
+  <FieldType>
+    <Field Name="TypeName">LookupFieldWithPicker</Field>
+    <Field Name="TypeDisplayName">CLIF - Lookup Field With Picker</Field>
+    <Field Name="TypeShortDescription">CLIF - Customised Lookup Field With Picker</Field>
+    <Field Name="ParentType">Lookup</Field>
+    <Field Name="FieldTypeClass">CLIF.Solutions.Code.LookupFieldWithPicker,CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd</Field>
+    <Field Name="FieldEditorUserControl">/_controltemplates/CLIFUserControls/LookupFieldWithPickerEditor.ascx</Field>
+    <Field Name="Sortable">TRUE</Field>
+    <Field Name="Filterable">TRUE</Field>
+    <Field Name="AllowBaseTypeRendering">TRUE</Field>
+  </FieldType>
+</FieldTypes>

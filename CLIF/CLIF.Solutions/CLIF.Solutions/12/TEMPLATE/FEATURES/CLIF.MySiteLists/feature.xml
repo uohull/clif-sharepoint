@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="d470b616-efad-493f-a8d4-6ca9f51ad97f"
+          Title="CLIF.MySiteLists"
+          Description="Description for CLIF.MySiteLists"
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Site"
+          ImageUrl="kpinormal-0.gif"
+          DefaultResourceFile="core"
+          ReceiverAssembly="CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd"
+          ReceiverClass="CLIF.Solutions.Code.ProjectDocuments" 
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    
+    <!--Project Documents-->
+    <ElementManifest Location="Project Documents\ListDefinition.xml"/>
+
+    <!--Archive-->
+    <ElementManifest Location="Archive\ListDefinition.xml"/>
+
+    <!--Approval Task-->
+    <ElementManifest Location="Tasks\ListDefinition.xml"/>
+
+    <!--Published Documents-->
+    <ElementManifest Location="Published Documents\ListDefinition.xml"/>
+
+  </ElementManifests>
+  <ActivationDependencies>
+    <!--CLIF.LookUpWithPicker-->
+    <!--<ActivationDependency FeatureId="10c19a31-9710-42d9-a1f2-4ac3f4aabb2d"/>-->
+  </ActivationDependencies>
+</Feature>

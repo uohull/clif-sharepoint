@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+***************************************************************************
+Created On: 04/11/2010
+Created By: Suresh Thampi
+==========================================================================
+Description:
+This feature This feature adds menu option to copy file(s) in bulk.
+***************************************************************************
+-->
+<Feature  Id="3a173654-a6d1-44f2-ac5b-87b629d6a17c"
+          Title="CLIF.BulkCopy"
+          Description="This feature adds menu option to copy file(s) in bulk."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Web"
+          ImageUrl="kpinormal-0.gif"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+</Feature>

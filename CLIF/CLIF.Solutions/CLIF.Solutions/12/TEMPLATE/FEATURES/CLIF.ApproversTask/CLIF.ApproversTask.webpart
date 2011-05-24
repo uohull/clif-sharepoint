@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="CLIF.Solutions.Code.ApproversTask, CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd" />
+      <importErrorMessage>Cannot import CLIF.ApproversTask Web Part.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Document Approval Task(s)</property>
+        <property name="Description" type="string">This features handles approvers task webpart.</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

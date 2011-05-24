@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="fdaa74b6-d588-49e6-906f-8ab05602277f" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate Name="Publishable Locations" DisplayName="Publishable Locations" Description="Publishable Locations List" BaseType="0" Type="104" OnQuickLaunch="TRUE" SecurityBits="11" Sequence="320" Image="/_layouts/images/itann.gif" />
+
+  <ListTemplate
+    Name="Publishable Locations"
+    DisplayName="Publishable Locations"
+    BaseType="0"
+    Type="20009"
+    OnQuickLaunch="TRUE"
+    SecurityBits="11"
+    Sequence="410"
+    Image="/_layouts/images/itgen.gif" />
+
+  <ListInstance
+       Title="Publishable Locations"
+       Description="Publishable Locations List"
+       Id="30009"
+       TemplateType="20009"
+       Url="Lists/PublishableLocations"
+       OnQuickLaunch="TRUE"
+       FeatureId="52fb0409-3619-4b04-a7dc-477bfff63367">
+  </ListInstance>
+  
+</Elements>

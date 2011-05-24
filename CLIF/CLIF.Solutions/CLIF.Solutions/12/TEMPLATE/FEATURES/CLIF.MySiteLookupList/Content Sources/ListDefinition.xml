@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="f00f2aa1-481b-4862-b30c-cfd171a1426f" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate 
+    Name="Content Sources" 
+    DisplayName="Content Sources" 
+    Description="" 
+    BaseType="0" 
+    Type="20006" 
+    NoCrawl="TRUE" 
+    OnQuickLaunch="TRUE" 
+    SecurityBits="11" 
+    Sequence="410" 
+    Image="/_layouts/images/itgen.gif" />
+  <ListInstance
+     Title="Content Sources"
+     Description="Content Sources List"
+     Id="30006"
+     TemplateType="20006"
+     Url="Lists/ContentSources"
+     OnQuickLaunch="FALSE"
+     FeatureId="0a41aa11-9357-4353-b2c3-512525a3bcee">
+  </ListInstance>
+</Elements>

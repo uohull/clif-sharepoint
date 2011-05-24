@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!--Approval Required-->
+  <Field Type="Boolean" Group="CLIF.Solutions" DisplayName="Approval Required" ID="{F322D541-17CE-4085-B5E0-AF973F5E012E}" StaticName="Approval_x0020_Required" Name="Approval_x0020_Required" >
+    <Default>0</Default>
+  </Field>
+
+  <!--Content Subject-->
+  <Field Type="Text" Group="CLIF.Solutions" DisplayName="Content Subject" Required="FALSE" MaxLength="255" ID="{2E6D337D-7ED7-4f7e-BD6E-9F59FF07089A}" StaticName="Content_x0020_Subject" Name="Content_x0020_Subject" />
+
+  <!--Document Author(s)-->
+  <Field Type="Note" Group="CLIF.Solutions"  DisplayName="Document Author(s)" Required="FALSE" NumLines="4" Sortable="FALSE" ID="{B75077E9-55AF-46ec-92B9-3964232BD1BC}" StaticName="Document_x0020_Authors" Name="Document_x0020_Authors" RichText="FALSE" AllowHyperlink="TRUE" RichTextMode="Compatible" IsolateStyles="FALSE" AppendOnly="FALSE" UnlimitedLengthInDocumentLibrary="FALSE" />
+
+  <!--Content MimeType-->
+  <Field Type="Text" Group="CLIF.Solutions" DisplayName="Content MimeType" Required="FALSE" MaxLength="255" ID="{CF1B58C9-1158-449f-AF73-DEE726F249BE}" StaticName="Content_x0020_MimeType" Name="Content_x0020_MimeType" />
+
+  <!--Content Coverage-->
+  <Field Type="Text" Group="CLIF.Solutions" DisplayName="Content Coverage" Required="FALSE" MaxLength="255" ID="{0214140E-510B-49dd-BFF6-E0A53D365CB7}" StaticName="Content_x0020_Coverage" Name="Content_x0020_Coverage" />
+
+  <!--Persistent ID-->
+  <Field Type="Text" Group="CLIF.Solutions" DisplayName="Persistent ID" Required="FALSE" MaxLength="255" ID="{58D4AC81-108A-4e5d-8F66-69E83D21B83E}" StaticName="Persistent_x0020_ID" Name="Persistent_x0020_ID" RowOrdinal="0" />
+  
+  <!--Document Library-->
+  <Field Type="Text" DisplayName="Document Library" Group="CLIF.Solutions"  Required="FALSE" MaxLength="255" ID="{0913aaeb-2c2f-4f8a-8941-44f393f8ddc3}" StaticName="Document_x0020_Library" Name="Document_x0020_Library" RowOrdinal="0" />
+
+  <!--Publishable Status-->
+  <Field ID="{722E04CF-D56E-490d-8D34-338A62A02524}" Type="Choice" Name="Publishable_x0020_Status" DisplayName="Publishable Status" ShowInDisplayForm="TRUE" ShowInNewForm="FALSE" ShowInEditForm="FALSE"  />
+
+
+  <!--Content Rights-->
+  <Field Type="Text" Group="CLIF.Solutions" DisplayName="Content Rights" Required="FALSE" MaxLength="255" ID="{2650755E-E920-4722-9B98-13DCA7831369}" StaticName="Content_x0020_Rights" Name="Content_x0020_Rights" />
+
+  <!--Access Level-->
+  <Field Type="URL"  Group="CLIF.Solutions" DisplayName="Access Level" Required="FALSE" Format="Image" ID="{dc61bb08-63cd-4b72-8e4b-148e7d15d11d}" StaticName="Access_x0020_Level" Name="Access_x0020_Level" />
+
+  <!--Approver's Note-->
+  <Field ID="{581FA709-55F7-45bf-8A59-99D5BB9DC7AB}" DisplayName="Approver's Note" Group="CLIF.Solutions" Type="Note" Required="FALSE" SourceID="{510fa9a7-e458-4a43-9c8d-374965b37947}" StaticName="Approver's Note" Name="Approvers_x0020_Note" RowOrdinal="0" RichText="TRUE" RichTextMode="Compatible" AllowHyperlink="TRUE"  />
+
+  <!--Document Approver-->
+  <Field Type="User" Group="CLIF.Solutions" DisplayName="Document Approver" List="UserInfo" Required="FALSE" ShowField="ImnName" UserSelectionMode="1" UserSelectionScope="0" ID="{09509D6F-F2F4-49ef-812C-A58D917D89D0}" StaticName="Document_x0020_Approver" Name="Document_x0020_Approver"/>
+
+  <!--Project Description-->
+  <Field Type="Note" Group="CLIF.Solutions" DisplayName="Project Description" Required="FALSE" NumLines="6" RichText="TRUE" RichTextMode="Compatible" Sortable="FALSE" ID="{b13374c6-7af5-494c-9cd1-56e068dbb3de}" StaticName="Project_x0020_Description" Name="Project_x0020_Description" RowOrdinal="0" />
+
+  <!--Published Date-->
+  <Field Type="DateTime" DisplayName="Published Date" Required="FALSE" Format="DateTime" ID="{7be751e1-71f9-44e3-96c6-31020a25fa69}"  StaticName="Published_x0020_Date" Name="Published_x0020_Date"  RowOrdinal="0" />
+
+</Elements>

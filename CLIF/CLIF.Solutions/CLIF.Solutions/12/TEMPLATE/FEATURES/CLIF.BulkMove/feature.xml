@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+***************************************************************************
+Created On: 04/11/2010
+Created By: Suresh Thampi
+==========================================================================
+Description:
+This feature This feature adds menu option to Move Muiltiple Files in the Site Action Menu
+***************************************************************************
+-->
+<Feature  Id="c4ee6da7-7743-4aa1-94fa-0df74b70b91e"
+          Title="CLIF.BulkMove"
+          Description="This feature adds menu option to move files in the site action menu."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Web"
+          ImageUrl="kpinormal-0.gif"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+</Feature>

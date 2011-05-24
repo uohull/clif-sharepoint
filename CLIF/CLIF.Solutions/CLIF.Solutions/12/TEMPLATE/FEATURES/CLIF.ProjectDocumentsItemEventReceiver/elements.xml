@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Receivers ListTemplateId="20007">
+    <Receiver>
+      <Name>ItemAdded-EventHandler</Name>
+      <Type>ItemAdded</Type>
+      <SequenceNumber>10000</SequenceNumber>
+      <Assembly>CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd</Assembly>
+      <Class>CLIF.Solutions.Code.ProjectDocumentsItemEventReceiver</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+    
+    <Receiver>
+      <Name>ItemUpdated-EventHandler</Name>
+      <Type>ItemUpdated</Type>
+      <SequenceNumber>10001</SequenceNumber>
+      <Assembly>CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd</Assembly>
+      <Class>CLIF.Solutions.Code.ProjectDocumentsItemEventReceiver</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+    
+    <Receiver>
+      <Name>ItemUpdating-EventHandler</Name>
+      <Type>ItemUpdating</Type>
+      <SequenceNumber>10001</SequenceNumber>
+      <Assembly>CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd</Assembly>
+      <Class>CLIF.Solutions.Code.ProjectDocumentsItemEventReceiver</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+    <Receiver>
+      <Name>ItemCheckingOut-EventHandler</Name>
+      <Type>ItemCheckingOut</Type>
+      <SequenceNumber>10001</SequenceNumber>
+      <Assembly>CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd</Assembly>
+      <Class>CLIF.Solutions.Code.ProjectDocumentsItemEventReceiver</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+    <Receiver>
+      <Name>ItemCheckedIn-EventHandler</Name>
+      <Type>ItemCheckedIn</Type>
+      <SequenceNumber>10002</SequenceNumber>
+      <Assembly>CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd</Assembly>
+      <Class>CLIF.Solutions.Code.ProjectDocumentsItemEventReceiver</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+    <Receiver>
+      <Name>ItemDeleting-EventHandler</Name>
+      <Type>ItemDeleting</Type>
+      <SequenceNumber>10002</SequenceNumber>
+      <Assembly>CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd</Assembly>
+      <Class>CLIF.Solutions.Code.ProjectDocumentsItemEventReceiver</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>    
+  </Receivers>
+</Elements>

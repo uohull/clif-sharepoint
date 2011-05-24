@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Module Name="CLIF.KCL.XSL" Url="Style Library/CLIF/KCL/XSL" RootWebOnly="True" Path="Files">
+    <File Url="TopNav.xsl" IgnoreIfAlreadyExists="True" Name="TopNav.xsl" Type="GhostableInLibrary" />
+    <File Url="SearchResults.xsl" IgnoreIfAlreadyExists="True" Name="SearchResults.xsl" Type="GhostableInLibrary" />
+    <File Url="LeftNav.xsl" IgnoreIfAlreadyExists="True" Name="LeftNav.xsl" Type="GhostableInLibrary" />
+  </Module>
+</Elements>

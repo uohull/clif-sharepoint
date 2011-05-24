@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="2af54365-9ac1-4646-ab6c-8907f0905e78"
+          Title="CLIF.MySiteFields"
+          Description="Activating this feature adds CLIF fields."
+          Version="12.0.0.0"
+          Hidden="TRUE"
+          Scope="Site"
+          ImageUrl="kpinormal-0.gif"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+</Feature>

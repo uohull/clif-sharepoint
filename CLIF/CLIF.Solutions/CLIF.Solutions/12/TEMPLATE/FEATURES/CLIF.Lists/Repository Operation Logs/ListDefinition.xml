@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="02852dec-b4d5-47f4-9046-ad8f71981039" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate 
+    Name="Repository Operation Logs" 
+    DisplayName="Repository Operation Logs" 
+    Description="" 
+    BaseType="0" 
+    Type="20002" 
+    OnQuickLaunch="TRUE" 
+    SecurityBits="11" 
+    Sequence="410" 
+    Image="/_layouts/images/itgen.gif" />
+
+  <ListInstance
+      Title="Repository Operation Logs"
+      Description="Repository Operation Logs"
+      Id="30002"
+      TemplateType="20002"
+      Url="Lists/RepositoryOperationLogs"
+      OnQuickLaunch="TRUE"
+      FeatureId="59d73371-02cb-4b45-a203-cd7e4904f27b">
+  </ListInstance>
+</Elements>

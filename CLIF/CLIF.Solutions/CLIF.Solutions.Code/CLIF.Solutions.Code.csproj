@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F92B621D-BD78-4869-A705-1EBB6449941F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CLIF.Solutions.Code</RootNamespace>
+    <AssemblyName>CLIF.Solutions.Code</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>keyfile.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Excel.Server.Udf, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Server, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Server.Search, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Office.Workflow.Tasks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.InfoPath, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Microsoft Office Servers\12.0\Bin\Microsoft.Office.InfoPath.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.InfoPath.Server, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Microsoft Office Servers\12.0\Bin\Microsoft.Office.InfoPath.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.ApplicationPages, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Common Files\Microsoft Shared\web server extensions\12\CONFIG\BIN\Microsoft.SharePoint.ApplicationPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Publishing, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Security, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="microsoft.sharepoint.WorkflowActions, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Mvp.Xml, Version=2.0.2158.1055, Culture=neutral, PublicKeyToken=dd92544dc05f5671, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Workflow.Activities">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Workflow.ComponentModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Workflow.Runtime">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.WorkflowServices">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeBehind\MasterPages\KCL.Master.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\MasterPages\MySite.Master.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\Pages\AddItemToRepository.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\Pages\ArchiveThisItem.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\Pages\BulkCopy.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\Pages\BulkCopyBasket.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\Pages\RepositoryExplorer.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\Pages\SearchResults.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\Pages\PublishDocument.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\Pages\ShareThisItem.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\Pages\ImportFromRepository.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\Pages\GetJavaScriptProxy.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\Pages\WorkflowEventData.cs" />
+    <Compile Include="CodeBehind\Pages\WorkflowStatus.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\Proxies\HydranetService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\UserControls\LookupWithPicker\Dialog.cs" />
+    <Compile Include="CodeBehind\UserControls\LookupWithPicker\EntityEditor.cs" />
+    <Compile Include="CodeBehind\UserControls\LookupWithPicker\Helper.cs" />
+    <Compile Include="CodeBehind\UserControls\LookupWithPicker\FieldType.cs" />
+    <Compile Include="CodeBehind\UserControls\LookupWithPicker\MultiSelectControl.cs" />
+    <Compile Include="CodeBehind\UserControls\LookupWithPicker\PickUpQuery.cs" />
+    <Compile Include="CodeBehind\UserControls\LookupWithPicker\PropertyBag.cs" />
+    <Compile Include="CodeBehind\UserControls\LookupWithPicker\SingleSelectControl.cs" />
+    <Compile Include="CodeBehind\UserControls\Navigation\LeftNav.cs" />
+    <Compile Include="CodeBehind\UserControls\PublishMetaDataForms\AJAXCtrlsHlpr.asmx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\UserControls\PublishMetaDataForms\DCBasic.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\UserControls\PublishMetaDataForms\MODSBasic.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\UserControls\SimpleSearch\SimpleSearch.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\UserControls\ShowUserDepartment\ShowUserDepartment.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeBehind\UserControls\TreeViewControl\TreeviewControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventReceivers\ProjectDocumentsItem.cs" />
+    <Compile Include="FeatureReceivers\AddRepositoryUsers\AddRepositoryUsers.cs" />
+    <Compile Include="FeatureReceivers\Pages\Pages.cs" />
+    <Compile Include="FeatureReceivers\Lists\Project Documents.cs" />
+    <Compile Include="FeatureReceivers\Lists\Lists.cs" />
+    <Compile Include="FeatureReceivers\LookupWithPicker\Worker.cs" />
+    <Compile Include="FeatureReceivers\ConfigureDocumentLibrary\Worker.cs" />
+    <Compile Include="FeatureReceivers\MySiteMasterPage\Worker.cs" />
+    <Compile Include="FeatureReceivers\MainMasterPage\Worker.cs" />
+    <Compile Include="CodeBehind\WebConfigEntries\WebConfigEntries.cs" />
+    <Compile Include="CodeBehind\WebConfigEntries\WebConfigModifications.cs" />
+    <Compile Include="Modules\BaseControl\IXmlDocumentProvider.cs" />
+    <Compile Include="Modules\BaseControl\SecurityHelper.cs" />
+    <Compile Include="Modules\BaseControl\Trace.cs" />
+    <Compile Include="Modules\BaseControl\Utility.cs" />
+    <Compile Include="Modules\ProjectDocuments.cs" />
+    <Compile Include="Modules\DocumentApprovalTasks.cs" />
+    <Compile Include="Modules\DisableItemEventScope.cs" />
+    <Compile Include="Modules\FedoraUserManagement.cs" />
+    <Compile Include="Modules\PublishableLocations.cs" />
+    <Compile Include="Modules\MySiteRepositorySettings.cs" />
+    <Compile Include="Modules\BaseControl\XmlBasedControl.cs" />
+    <Compile Include="Modules\BaseControl\XmlBaseFieldControl.cs" />
+    <Compile Include="Modules\BaseControl\XmlFieldValue.cs" />
+    <Compile Include="Modules\BaseControl\XmlFieldValues.cs" />
+    <Compile Include="Modules\BaseControl\XslTransformControl.cs" />
+    <Compile Include="Modules\DocumentSearch.cs" />
+    <Compile Include="Modules\PublishMetaDataForms\ClifSendFedora.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\PublishMetaDataForms\ClifSendFedora.aspx.designer.cs">
+      <DependentUpon>ClifSendFedora.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PublishMetaDataForms\ConfigurationSettings.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\CAML.cs" />
+    <Compile Include="Utilities\ExcelUserDefinedFunctions.cs" />
+    <Compile Include="Utilities\PolicyDS.cs" />
+    <Compile Include="Utilities\SPAuditMetadata.cs" />
+    <Compile Include="Utilities\SPHelper.cs" />
+    <Compile Include="Utilities\SPWorkflowHistoryMetadata.cs" />
+    <Compile Include="Utilities\Utility.cs" />
+    <Compile Include="Utilities\XMLData.cs" />
+    <Compile Include="CodeBehind\Proxies\TreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\ILookUpService.cs" />
+    <Compile Include="Utilities\ITableDataService.cs" />
+    <Compile Include="Utilities\ITreeViewDataService.cs" />
+    <Compile Include="Utilities\RepositoryHelper.cs" />
+    <Compile Include="WebPartCode\ApproversTask.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="keyfile.snk" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\ar\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\cs\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\de\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\es\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\fr\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\he\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\hi\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\it\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\ja\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\ko\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\License.txt" />
+    <Content Include="bin\Mvp.Xml.dll" />
+    <Content Include="bin\nl\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\pt\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\ru\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\tr-TR\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\zh-CHS\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\zh-CHT\AjaxControlToolkit.resources.dll" />
+    <EmbeddedResource Include="Modules\PublishMetaDataForms\Resources\Javascript\DCBuilder.js" />
+    <EmbeddedResource Include="Modules\PublishMetaDataForms\Resources\Javascript\MDHelper.js" />
+    <EmbeddedResource Include="Modules\PublishMetaDataForms\Resources\Javascript\MODSBuilder.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Web\WebUtils.csproj">
+      <Project>{C0D97556-7650-438E-8E82-D8F461534B42}</Project>
+      <Name>WebUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Hydranet\Hydranet.csproj">
+      <Project>{96863BF2-1948-4251-AF09-6BB3D038BB9E}</Project>
+      <Name>Hydranet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\PolicyManagement\PolicyManagement.csproj">
+      <Project>{BA3EE6F8-29F6-493C-9856-AF8399429051}</Project>
+      <Name>PolicyManagement</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

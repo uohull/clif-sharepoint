@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="4e44b11a-a028-4602-98c4-371acc568b66"
+          Title="CLIF.ProjectDocumentsItemEventReceiver"
+          Description="Description for CLIF.ProjectDocumentsItemEventReceiver"
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          ImageUrl="kpinormal-0.gif"
+          Scope="Web"
+          DefaultResourceFile="core"          
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>
+  </ElementManifests>
+</Feature>

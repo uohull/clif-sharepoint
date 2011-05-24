@@ -1,0 +1,478 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CC0758BA-0954-447A-9305-6FB72EDB50F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CLIF.Solutions</RootNamespace>
+    <AssemblyName>CLIF.Solutions</AssemblyName>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>CLIF.Solutions.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/CLIF.Solutions/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>80\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.InfoPath, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.InfoPath.Server, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Server, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.ApplicationPages, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Common Files\Microsoft Shared\web server extensions\12\CONFIG\BIN\Microsoft.SharePoint.ApplicationPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Security, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="12\TEMPLATE\LAYOUTS\CLIFPages\cliferror.aspx.cs">
+      <DependentUpon>cliferror.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="12\TEMPLATE\LAYOUTS\CLIFPages\cliferror.aspx.designer.cs">
+      <DependentUpon>cliferror.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="wsp.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="12\TEMPLATE\CONTROLTEMPLATES\CLIFUserControls\AJAXCtrlsHlpr.asmx" />
+    <Content Include="12\TEMPLATE\CONTROLTEMPLATES\CLIFUserControls\DCBasic.ascx" />
+    <Content Include="12\TEMPLATE\CONTROLTEMPLATES\CLIFUserControls\MODSBasic.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\CONTROLTEMPLATES\CLIFUserControls\images\addctrl.gif" />
+    <Content Include="12\TEMPLATE\CONTROLTEMPLATES\CLIFUserControls\images\ajax-loader.gif" />
+    <Content Include="12\TEMPLATE\CONTROLTEMPLATES\CLIFUserControls\images\Calendar-button.png" />
+    <Content Include="12\TEMPLATE\CONTROLTEMPLATES\CLIFUserControls\images\removectrl.gif" />
+    <Content Include="12\TEMPLATE\CONTROLTEMPLATES\CLIFUserControls\images\server_go.png" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.AddToRepositoryAdvanced\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.AddToRepositoryAdvanced\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ContentTypes\Document Approval Task\ContentType.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ContentTypes\Publishable Locations\ContentType.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ContentTypes\Repository Config Files\ContentType.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Document Approval Tasks\AllItems.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Document Approval Tasks\DispForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Document Approval Tasks\EditForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Document Approval Tasks\ListDefinition.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Document Approval Tasks\NewForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Document Approval Tasks\schema.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.LookupList\Publishable Locations\AllItems.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.LookupList\Publishable Locations\DispForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.LookupList\Publishable Locations\EditForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.LookupList\Publishable Locations\ListDefinition.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.LookupList\Publishable Locations\NewForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.LookupList\Publishable Locations\schema.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Repository Config Files\AllItems.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Repository Config Files\DispForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Repository Config Files\EditForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Repository Config Files\ListDefinition.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Repository Config Files\NewForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Repository Config Files\schema.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteContentTypes\Content Right\ContentType.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteContentTypes\Published Document\ContentType.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteContentTypes\Project\ContentType.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteContentTypes\Document Approval Task\ContentType.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Published Documents\AllItems.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Published Documents\DispForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Published Documents\EditForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Published Documents\ListDefinition.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Published Documents\NewForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Published Documents\schema.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Rights\AllItems.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Rights\DispForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Rights\EditForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Rights\ListDefinition.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Rights\NewForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Rights\schema.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Projects\AllItems.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Projects\DispForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Projects\EditForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Projects\ListDefinition.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Projects\NewForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Projects\schema.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Tasks\ListDefinition.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySitePageLayouts\Files\SearchResult.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.PageLayouts\Files\SearchResult.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Themes\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Themes\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.AddRepositoryUsers\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.AddRepositoryUsers\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySitePageLayouts\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySitePageLayouts\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.RepositoryExplorer\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.RepositoryExplorer\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookUpWithPicker\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookUpWithPicker\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.LookupList\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.LookupList\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.XSL\Files\LeftNav.xsl" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\RepositoryExplorer.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\WrkStat.aspx" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\Css\Styles.css" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ApproversTask\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ApproversTask\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.BulkCopy\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.BulkCopy\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.BulkMove\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.BulkMove\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Search\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Search\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.XSL\Files\SearchResults.xsl" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\BulkCopyBasket.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\SearchResults.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\ImportFromRepository.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\JS\jquery-1.4.1.js" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\JS\plugins\validate\jquery.validate.js" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\Styles\SearchResult.css" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\XSL\SearchResults.xsl" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFSendTo\ClifSendFedora.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFSendTo\Css\Styles.css" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFSendTo\Js\ajax.js" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFSendTo\Js\jquery-1.4.1.js" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFSendTo\Js\plugins\validate\jquery.validate.js" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\alldayOver_simple.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\allday_simple.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\ApplyFiltersActive.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\ApplyFiltersHoverOver.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\ApplyFiltersInactive.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\formtitlegrad_simple.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\linksectiongrad_simple.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\listheadergrad_simple.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\mossExtension.css" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\navBullet_simple.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\pageTitleBKGD_simple.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\partgrad_simple.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\portaltabhover.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\portaltabselected.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\portraitbackground.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\quickLaunchHeader_simple.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\CLIF.INF" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\siteTitleBKGD_simple.jpg" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\theme.css" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\toolgrad_simple.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\topnavhover_simple.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\topnavselected_simple.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\viewheadergrad_simple.gif" />
+    <Content Include="12\TEMPLATE\THEMES\CLIF\weekbox_simple.gif" />
+    <Content Include="12\TEMPLATE\CONTROLTEMPLATES\CLIFUserControls\ShowUserDepartment.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\CONTROLTEMPLATES\CLIFUserControls\LookupFieldWithPickerEditor.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\CONTROLTEMPLATES\CLIFUserControls\TreeView.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.AddToRepository\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.AddToRepository\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteContentTypes\Archive\ContentType.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Archive\AllItems.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Archive\DispForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Archive\EditForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Archive\ListDefinition.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Archive\NewForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Archive\schema.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\ListData.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteContentTypes\Content Language\ContentType.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteContentTypes\Content Source\ContentType.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteContentTypes\Project Document\ContentType.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ContentTypes\MySite Repository Setting\ContentType.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ContentTypes\Repository Operation Log\ContentType.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Fields\fields.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\Center.gif" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\favicon.ico" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\Guillemot.png" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\KCLImage.jpg" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\KingsLogo.jpg" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\Left.gif" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\NavBackground.jpg" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\NavBackgroundSelected.jpg" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\NavLeftCorner.jpg" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\NavRightCorner.jpg" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\NavSelectedLeftCorner.jpg" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\NavSelectedRightCorner.jpg" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\NavSeparator.jpg" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\OneSpaceLogo.jpg" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\PersonalCenter.gif" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\PersonalLeft.gif" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\PersonalRight.gif" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\Right.gif" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\Search.jpg" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\SearchActive.jpg" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\KCL\SectionBackground.jpg" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ImportFromRepository\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ImportFromRepository\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\MySite Repository Settings\AllItems.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\MySite Repository Settings\DispForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\MySite Repository Settings\EditForm.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\MySite Repository Settings\ListDefinition.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\MySite Repository Settings\NewForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\MySite Repository Settings\schema.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Languages\AllItems.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Languages\DispForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Languages\EditForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Languages\ListDefinition.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Languages\NewForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Languages\schema.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Sources\AllItems.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Sources\DispForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Sources\EditForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Sources\ListDefinition.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Sources\NewForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Content Sources\schema.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Project Documents\AllItems.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Project Documents\Combine.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Project Documents\DispForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Project Documents\EditForm.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Project Documents\ListDefinition.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Project Documents\repair.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Project Documents\schema.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Project Documents\Upload.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\Project Documents\WebFldr.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Repository Operation Logs\AllItems.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Repository Operation Logs\DispForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Repository Operation Logs\EditForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Repository Operation Logs\ListDefinition.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Repository Operation Logs\NewForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\Repository Operation Logs\schema.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Publishable Status\AllItems.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Publishable Status\DispForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Publishable Status\EditForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Publishable Status\ListDefinition.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Publishable Status\NewForm.aspx" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\Publishable Status\schema.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteStapler\Elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteStapler\Feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySite\Elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySite\Feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Scripts\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Scripts\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Scripts\Files\ajax.js" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Scripts\Files\AjaxTreeView.js" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Scripts\Files\jcl.js" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Fields\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Scripts\Files\jquery-1.3.2-vsdoc2.js" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Scripts\Files\jquery-1.3.2.js" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Styles\KCL\CSS\Basic.css" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Styles\KCL\CSS\KCLMaster.css" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFStyles\OverrideCORE.CSS" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Styles\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Styles\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.PageLayouts\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.PageLayouts\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MasterPages\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MasterPages\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Images\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.XSL\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.XSL\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.XSL\Files\TopNav.xsl" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ContentTypes\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.WebConfigEntries\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.WebConfigEntries\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Lists\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ShareDocuments\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ShareDocuments\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.LookUpWithPicker\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.LookUpWithPicker\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteContentTypes\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteFields\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteFields\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLists\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ProjectDocumentsItemEventReceiver\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ProjectDocumentsItemEventReceiver\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.MySiteLookupList\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Archive\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.Archive\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.RetrieveFromArchive\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.RetrieveFromArchive\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ConfigureDocumentLibrary\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ConfigureDocumentLibrary\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ShareThisDocument\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.ShareThisDocument\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.PublishDocument\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\CLIF.PublishDocument\feature.xml" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\AddItemToRepository.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\ArchiveListItem.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\PublishDocument.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\ShareThisItem.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\Images\ajax-loader.gif" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\JS\ajax.js" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\Proxies\GetJavaScriptProxy.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\Images\dc.png" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\Images\de.png" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\Images\do.png" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\JS\jcl.js" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\JS\TreeView.js" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\Proxies\TreeView.asmx" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\Styles\treeview.css" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\XSL\wsdl.xslt" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\HydranetService.asmx" />
+    <Content Include="12\TEMPLATE\XML\fldtypes_CLIFLookupFieldWithPicker.xml" />
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\BulkCopy.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\CLIFPages\cliferror.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="GAC\AjaxControlToolkit.dll" />
+    <Content Include="GAC\CLIF.Solutions.Code.dll" />
+    <Content Include="solutionid.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="12\TEMPLATE\FEATURES\CLIF.AddToRepositoryAdvanced\Mods.xsn" />
+    <None Include="12\TEMPLATE\FEATURES\CLIF.MasterPages\Files\KCL.master">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="12\TEMPLATE\FEATURES\CLIF.MySite\Files\KCL_MySite.master">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="12\TEMPLATE\FEATURES\CLIF.WebConfigEntries\web.config" />
+    <None Include="12\TEMPLATE\FEATURES\CLIF.ApproversTask\CLIF.ApproversTask.webpart" />
+    <None Include="12\TEMPLATE\LAYOUTS\CLIFPages\AddItemToRepository.master">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="CLIF.Solutions.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Web\WebUtils.csproj">
+      <Project>{C0D97556-7650-438E-8E82-D8F461534B42}</Project>
+      <Name>WebUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Hydranet\Hydranet.csproj">
+      <Project>{96863BF2-1948-4251-AF09-6BB3D038BB9E}</Project>
+      <Name>Hydranet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CLIF.Solutions.Code\CLIF.Solutions.Code.csproj">
+      <Project>{F92B621D-BD78-4869-A705-1EBB6449941F}</Project>
+      <Name>CLIF.Solutions.Code</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties SPVisualDev_IncludedAssemblies="" SPVisualDev_WSPAdditionalSwitches="" SPVisualDev_AssemblyBuildType="ProjectDefualt" SPVisualDev_WebPartsNSSuffix="" SPVisualDev_WebCustomConstrolNSsuffix="" SPVisualDev_MasterPagesNSsuffix="" SPVisualDev_ASPXPagesNSsuffix="" SPVisualDev_WSPSolutionId="d3b4c415-c174-437c-bf74-6f10e7ea5c80" SPVisualDev_SPVisualDev_ProjID="Generic" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

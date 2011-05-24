@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="4c3d52af-dcd3-40ec-b47c-6fe22ee4021c" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate 
+    Name="Content Languages" 
+    DisplayName="Content Languages" 
+    Description="" 
+    NoCrawl="TRUE" 
+    BaseType="0" 
+    Type="20005" 
+    OnQuickLaunch="TRUE" 
+    SecurityBits="11" 
+    Sequence="410" 
+    Image="/_layouts/images/itgen.gif" />
+  <ListInstance
+     Title="Content Languages"
+     Description="Content Languages List"
+     Id="30005" 
+     TemplateType="20005"
+     Url="Lists/ContentLanguages"
+     OnQuickLaunch="FALSE"
+     FeatureId="0a41aa11-9357-4353-b2c3-512525a3bcee">
+  </ListInstance>
+</Elements>

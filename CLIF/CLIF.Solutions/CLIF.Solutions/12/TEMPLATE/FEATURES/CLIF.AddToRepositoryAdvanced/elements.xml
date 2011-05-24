@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+  <Module Name="XSN" Url="FormServerTemplates" RootWebOnly="TRUE">
+    <File Url="Mods.xsn" Name="Mods.xsn" Type="GhostableInLibrary"/>
+  </Module>
+  <CustomAction
+     Id="CLIFSendToMDForms"
+     Title="Publish Document(Advanced)"
+     Location="EditControlBlock"
+     RegistrationType="ContentType"
+     RegistrationId="0x010100132D74E474FA4309A1777FEBED2BCE29"
+     ShowInLists="TRUE"      
+     Sequence="102"
+     ImageUrl="/_controltemplates/clifsendfedora/images/server_go.png">   
+    <UrlAction Url="javascript:window.location.href='{SiteUrl}/_layouts/CLIFSendTo/ClifSendFedora.aspx?listId={ListId}&amp;itemId={ItemId}&amp;SourceURL=' + window.location;window.event.returnValue = false;"/>
+  </CustomAction>  
+</Elements>
+

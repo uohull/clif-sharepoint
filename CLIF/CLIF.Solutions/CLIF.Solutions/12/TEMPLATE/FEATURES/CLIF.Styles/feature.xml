@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="b80cce94-386b-4124-812a-f9c4565afd01"
+          Title="CLIF.Styles"
+          Description="Activating this feature will copy folder(s)/file(s) to Style Library Folder."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          ImageUrl="kpinormal-0.gif"
+          Scope="Site"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+</Feature>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="CLIF.ShareThisDocumentMenu"
+       RegistrationType="ContentType"
+       RegistrationId="0x010100132D74E474FA4309A1777FEBED2BCE29"
+       Location="EditControlBlock"
+       Title="Set Access Level"
+       Sequence="100"
+       ImageUrl="_layouts/images/securityconfig.gif">
+    <UrlAction Url="javascript:window.location.href='{SiteUrl}/_layouts/clifpages/ShareThisItem.aspx?List={ListId}&amp;ID={ItemId}&amp;SourceURL=' + window.location;window.event.returnValue = false;"/>
+  </CustomAction>
+
+  <CustomAction
+      Id="CLIF.ShareThisDocumentButton"
+      RegistrationType="ContentType"
+      RegistrationId="0x010100132D74E474FA4309A1777FEBED2BCE29"
+      Sequence="0"
+      ImageUrl="_layouts/images/securityconfig.gif"
+      Rights="AddListItems"
+      Location="DisplayFormToolbar" 
+      Title="Set Access Level">
+    <UrlAction Url="javascript:window.location.href='{SiteUrl}/_layouts/clifpages/ShareThisItem.aspx?List={ListId}&amp;ID={ItemId}&amp;SourceURL=' + window.location;window.event.returnValue = false;"/>
+  </CustomAction>
+</Elements>

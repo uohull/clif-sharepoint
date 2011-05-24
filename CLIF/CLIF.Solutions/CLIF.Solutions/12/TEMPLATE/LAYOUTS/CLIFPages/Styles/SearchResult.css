@@ -1,0 +1,52 @@
+/*SEARCH/PAGINATION AND LISTINGS*/
+
+.searchNumber { margin-left: 10px; }
+.searchterm { font-weight: bold; }
+
+.paging { width: auto;font-size: 1.2em;text-align:center;margin:0 !important;padding: 0 !important }
+.pagingInner{margin: 0 auto !important;width: 100%; text-align:center}
+*html .pagingInner{margin: 0 -10px 0 auto !important;}
+.paginginfo { display: block; float: left; width: 250px; padding: 0 0 0 10px; text-align: left; }
+.paging .pagelinks br { clear: both; display: block; }
+.paging .pagelinks { float: left; text-align: right; display: block; width: auto; height: 100%; margin: 3px; }
+
+a.paginglink { display: block; float: left; margin: 0 5px; height: 18px; }
+a.paginglink_active { display: block; float: left; margin: 0 5px; font-weight: bold; border: none; height: 18px; }
+
+ol.search-results li { margin: 10px 10px 0 0px; }
+ol.search-results li a { font-size: 1.2em; padding-bottom: 1px; text-decoration: none; line-height: 1.6em;  }
+*html ol.search-results li a {margin-left:0.5em;}
+ol.search-results li a:hover { text-decoration: underline; }
+ol.search-results li span{margin-left:2em;font-size:1em;display:block;}
+
+.btnNext { width: 21px; height: 19px; background: transparent url(/PublishingImages/webparts/icons/btn_next.gif) no-repeat top right; display: block; float: left; border: none; margin-right: 10px; margin-left: 5px; }
+.btnNext:hover, .btnNext:active, .btnNext:focus {background-color:transparent;}
+.btnNext_disabled { width: 21px; height: 19px; background: transparent url(/PublishingImages/webparts/icons/btn_next_disabled.gif) no-repeat top right; display: block; float: left; margin-right: 10px; margin-left: 5px; }
+.btnPrevious { width: 21px; height: 19px; padding-right: 5px; background: transparent url(/PublishingImages/webparts/icons/btn_previous.gif) no-repeat; display: block; float: left; }
+.btnPrevious:hover, .btnPrevious:active, .btnPrevious:focus {background-color:transparent;}
+.btnPrevious_disabled { width: 21px; height: 19px; padding-right: 5px; background: transparent url(/PublishingImages/webparts/icons/btn_previous_disabled.gif) no-repeat; display: block; float: left; }
+
+.SiteMap ul { padding-left: 10px; padding-bottom: 15px; }
+.SiteMap ul ul { }
+.SiteMap ul ul ul { padding-bottom: 0; }
+.SiteMap ul li { padding: 3px 0 0px 0; }
+.SiteMap ul li a { font-weight: bold; padding-left: 8px; background: url(/PublishingImages/master/navigation/nav_y_Bullet_default.gif) no-repeat 0px; }
+.SiteMap ul li ul li a { font-weight: normal !important; }
+
+
+.ms-siteaction { height:auto;}
+
+.resultDiv
+{
+	background-color: #EFEFEF;
+	padding-left: 10px;
+	color:Black;
+}
+.MetaTable
+{
+	font-size: xx-small;
+}
+.Documents
+{
+	font-weight:bold;
+}

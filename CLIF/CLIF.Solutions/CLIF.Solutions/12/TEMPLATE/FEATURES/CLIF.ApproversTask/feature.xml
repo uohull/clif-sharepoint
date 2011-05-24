@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="b821e353-f176-4008-813f-6f50215a9ca8"
+          Title="CLIF.ApproversTask"
+          Description="This features handles approvers task webpart."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          ImageUrl="kpinormal-0.gif"
+          Scope="Web"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>
+    <ElementFile Location="CLIF.ApproversTask.webpart" />
+  </ElementManifests>
+</Feature>

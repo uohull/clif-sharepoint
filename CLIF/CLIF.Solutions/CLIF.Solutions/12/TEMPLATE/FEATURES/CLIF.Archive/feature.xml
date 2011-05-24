@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+***************************************************************************
+Created On: 07/01/2010
+Created By: Suresh Thampi
+==========================================================================
+Description:
+This feature adds 'Archive this item' ECB menu to custom document library
+***************************************************************************
+-->
+<Feature  Id="f9b0c9e4-7263-4f6d-8900-ba93a700fa79"
+          Title="CLIF.Archive"
+          Description="Activating this feature adds ECBMenu to archive documents in the library."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Web"
+          DefaultResourceFile="core"
+          ImageUrl="kpinormal-0.gif"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+</Feature>

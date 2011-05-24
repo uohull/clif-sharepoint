@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="9af0c18f-a938-46d2-98f8-4855b61d5837" xmlns="http://schemas.microsoft.com/sharepoint/">
+
+  <!--Repository Config Files-->
+  <ListTemplate
+    Name="Repository Config Files"
+    DisplayName="Repository Config Files"
+    BaseType="0"
+    Type="200010"
+    OnQuickLaunch="TRUE"
+    SecurityBits="11"
+    Sequence="410"
+    Image="/_layouts/images/itgen.gif" />
+  <ListInstance
+       Title="Repository Config Files"
+       Description="Repository Config Files List"
+       Id="300010"
+       TemplateType="200010"
+       Url="Lists/RepositoryConfigFiles"
+       OnQuickLaunch="TRUE"
+       FeatureId="59d73371-02cb-4b45-a203-cd7e4904f27b">
+  </ListInstance>
+  <!--Repository Config Files-->
+  
+</Elements>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  
+  <Module Name="CLIF.KCL.IMAGES" Url="SiteCollectionImages/CLIF/KCL" Path="KCL">
+    <File Url="KCLImage.jpg" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="KingsLogo.jpg" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="OneSpaceLogo.jpg" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="Search.jpg" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="SearchActive.jpg" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <!--CSS IMAGES-->
+    <File Url="Guillemot.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="Left.gif" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="Center.gif" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="Right.gif" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="PersonalLeft.gif" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="PersonalCenter.gif" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="PersonalRight.gif" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="SectionBackground.jpg" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="NavBackground.jpg" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="NavBackgroundSelected.jpg" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="NavLeftCorner.jpg" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="NavRightCorner.jpg" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="NavSelectedLeftCorner.jpg" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="NavSelectedRightCorner.jpg" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="NavSeparator.jpg" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+    <File Url="favicon.ico" Type="GhostableInLibrary" IgnoreIfAlreadyExists="True" />
+  </Module>
+</Elements>

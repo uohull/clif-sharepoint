@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns1="http://www.fedora.info/definitions/1/0/types/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://www.fedora.info/definitions/1/0/api/" xmlns:impl="http://www.fedora.info/definitions/1/0/api/" targetNamespace="http://www.fedora.info/definitions/1/0/api/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.fedora.info/definitions/1/0/types/">
+      <xsd:import namespace="http://www.fedora.info/definitions/1/0/api/" />
+      <xsd:element name="describeRepository">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="describeRepositoryResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="repositoryInfo" type="tns1:RepositoryInfo" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="RepositoryInfo">
+        <xsd:sequence>
+          <xsd:element name="repositoryName" nillable="true" type="xsd:string" />
+          <xsd:element name="repositoryVersion" nillable="true" type="xsd:string" />
+          <xsd:element name="repositoryBaseURL" nillable="true" type="xsd:string" />
+          <xsd:element name="repositoryPIDNamespace" nillable="true" type="xsd:string" />
+          <xsd:element name="defaultExportFormat" nillable="true" type="xsd:string" />
+          <xsd:element name="OAINamespace" nillable="true" type="xsd:string" />
+          <xsd:element name="adminEmailList" nillable="true" type="impl:ArrayOf_xsd_string" />
+          <xsd:element name="samplePID" nillable="true" type="xsd:string" />
+          <xsd:element name="sampleOAIIdentifier" nillable="true" type="xsd:string" />
+          <xsd:element name="sampleSearchURL" nillable="true" type="xsd:string" />
+          <xsd:element name="sampleAccessURL" nillable="true" type="xsd:string" />
+          <xsd:element name="sampleOAIURL" nillable="true" type="xsd:string" />
+          <xsd:element name="retainPIDs" nillable="true" type="impl:ArrayOf_xsd_string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getObjectProfile">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="asOfDateTime" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getObjectProfileResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="objectProfile" type="tns1:ObjectProfile" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ObjectProfile">
+        <xsd:sequence>
+          <xsd:element name="pid" nillable="true" type="xsd:string" />
+          <xsd:element name="objLabel" nillable="true" type="xsd:string" />
+          <xsd:element name="objModels" nillable="true" type="impl:ArrayOf_xsd_string" />
+          <xsd:element name="objCreateDate" nillable="true" type="xsd:string" />
+          <xsd:element name="objLastModDate" nillable="true" type="xsd:string" />
+          <xsd:element name="objDissIndexViewURL" nillable="true" type="xsd:string" />
+          <xsd:element name="objItemIndexViewURL" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="listMethods">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="asOfDateTime" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listMethodsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="objectMethod" type="tns1:ObjectMethodsDef" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:simpleType name="passByRef">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="URL_REF" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="passByValue">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="VALUE" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="datastreamInputType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="fedora:datastreamInputType" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="userInputType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="fedora:userInputType" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="defaultInputType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="fedora:defaultInputType" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="MethodParmDef">
+        <xsd:sequence>
+          <xsd:element name="parmName" nillable="true" type="xsd:string" />
+          <xsd:element name="parmType" nillable="true" type="xsd:string" />
+          <xsd:element name="parmDefaultValue" nillable="true" type="xsd:string" />
+          <xsd:element name="parmDomainValues" nillable="true" type="impl:ArrayOf_xsd_string" />
+          <xsd:element name="parmRequired" type="xsd:boolean" />
+          <xsd:element name="parmLabel" nillable="true" type="xsd:string" />
+          <xsd:element name="parmPassBy" nillable="true" type="xsd:string" />
+          <xsd:element name="PASS_BY_REF" nillable="true" type="tns1:passByRef" />
+          <xsd:element name="PASS_BY_VALUE" nillable="true" type="tns1:passByValue" />
+          <xsd:element name="DATASTREAM_INPUT" nillable="true" type="tns1:datastreamInputType" />
+          <xsd:element name="USER_INPUT" nillable="true" type="tns1:userInputType" />
+          <xsd:element name="DEFAULT_INPUT" nillable="true" type="tns1:defaultInputType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ObjectMethodsDef">
+        <xsd:sequence>
+          <xsd:element name="PID" type="xsd:string" />
+          <xsd:element name="serviceDefinitionPID" type="xsd:string" />
+          <xsd:element name="methodName" type="xsd:string" />
+          <xsd:element name="methodParmDefs" type="impl:ArrayOf_tns1_MethodParmDef" />
+          <xsd:element name="asOfDate" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="listDatastreams">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="asOfDateTime" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listDatastreamsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="datastreamDef" type="tns1:DatastreamDef" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="DatastreamDef">
+        <xsd:sequence>
+          <xsd:element name="ID" nillable="true" type="xsd:string" />
+          <xsd:element name="label" nillable="true" type="xsd:string" />
+          <xsd:element name="MIMEType" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getDatastreamDissemination">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="dsID" type="xsd:string" />
+            <xsd:element name="asOfDateTime" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDatastreamDisseminationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="dissemination" type="tns1:MIMETypedStream" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Property">
+        <xsd:sequence>
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="value" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="MIMETypedStream">
+        <xsd:sequence>
+          <xsd:element name="MIMEType" nillable="true" type="xsd:string" />
+          <xsd:element name="stream" nillable="true" type="xsd:base64Binary" />
+          <xsd:element name="header" nillable="true" type="impl:ArrayOf_tns1_Property" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getDissemination">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="serviceDefinitionPid" type="xsd:string" />
+            <xsd:element name="methodName" type="xsd:string" />
+            <xsd:element maxOccurs="unbounded" name="parameters" type="tns1:Property" />
+            <xsd:element name="asOfDateTime" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDisseminationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="dissemination" type="tns1:MIMETypedStream" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="findObjects">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="resultFields" type="xsd:string" />
+            <xsd:element name="maxResults" type="xsd:nonNegativeInteger" />
+            <xsd:element name="query" type="tns1:FieldSearchQuery" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:simpleType name="ComparisonOperator">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="has" />
+          <xsd:enumeration value="eq" />
+          <xsd:enumeration value="lt" />
+          <xsd:enumeration value="le" />
+          <xsd:enumeration value="gt" />
+          <xsd:enumeration value="ge" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="Condition">
+        <xsd:sequence>
+          <xsd:element name="property" nillable="true" type="xsd:string" />
+          <xsd:element name="operator" nillable="true" type="tns1:ComparisonOperator" />
+          <xsd:element name="value" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FieldSearchQuery">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="conditions" nillable="true" type="impl:ArrayOf_tns1_Condition" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="terms" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="findObjectsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" type="tns1:FieldSearchResult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ListSession">
+        <xsd:sequence>
+          <xsd:element name="token" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="cursor" type="xsd:nonNegativeInteger" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="completeListSize" type="xsd:nonNegativeInteger" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="expirationDate" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ObjectFields">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="pid" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="label" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="state" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ownerId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="cDate" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="mDate" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="dcmDate" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="title" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="creator" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="subject" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="description" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="publisher" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="contributor" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="date" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="type" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="format" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="identifier" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="source" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="language" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="relation" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="coverage" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="rights" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FieldSearchResult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="listSession" nillable="true" type="tns1:ListSession" />
+          <xsd:element name="resultList" type="impl:ArrayOf_tns1_ObjectFields" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="resumeFindObjects">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="sessionToken" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="resumeFindObjectsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" type="tns1:FieldSearchResult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getObjectHistory">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getObjectHistoryResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="modifiedDate" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.fedora.info/definitions/1/0/api/">
+      <xsd:import namespace="http://www.fedora.info/definitions/1/0/types/" />
+      <xsd:complexType name="ArrayOf_xsd_string">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_MethodParmDef">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns1:MethodParmDef" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_Property">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns1:Property" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_Condition">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns1:Condition" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_ObjectFields">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns1:ObjectFields" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="describeRepositoryResponse">
+    <wsdl:part name="parameters" element="tns1:describeRepositoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getObjectProfileResponse">
+    <wsdl:part name="parameters" element="tns1:getObjectProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="findObjectsResponse">
+    <wsdl:part name="parameters" element="tns1:findObjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="listDatastreamsRequest">
+    <wsdl:part name="parameters" element="tns1:listDatastreams" />
+  </wsdl:message>
+  <wsdl:message name="listDatastreamsResponse">
+    <wsdl:part name="parameters" element="tns1:listDatastreamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="resumeFindObjectsResponse">
+    <wsdl:part name="parameters" element="tns1:resumeFindObjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDatastreamDisseminationResponse">
+    <wsdl:part name="parameters" element="tns1:getDatastreamDisseminationResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDisseminationRequest">
+    <wsdl:part name="parameters" element="tns1:getDissemination" />
+  </wsdl:message>
+  <wsdl:message name="listMethodsRequest">
+    <wsdl:part name="parameters" element="tns1:listMethods" />
+  </wsdl:message>
+  <wsdl:message name="listMethodsResponse">
+    <wsdl:part name="parameters" element="tns1:listMethodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getObjectProfileRequest">
+    <wsdl:part name="parameters" element="tns1:getObjectProfile" />
+  </wsdl:message>
+  <wsdl:message name="getObjectHistoryRequest">
+    <wsdl:part name="parameters" element="tns1:getObjectHistory" />
+  </wsdl:message>
+  <wsdl:message name="getObjectHistoryResponse">
+    <wsdl:part name="parameters" element="tns1:getObjectHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDatastreamDisseminationRequest">
+    <wsdl:part name="parameters" element="tns1:getDatastreamDissemination" />
+  </wsdl:message>
+  <wsdl:message name="findObjectsRequest">
+    <wsdl:part name="parameters" element="tns1:findObjects" />
+  </wsdl:message>
+  <wsdl:message name="describeRepositoryRequest">
+    <wsdl:part name="parameters" element="tns1:describeRepository" />
+  </wsdl:message>
+  <wsdl:message name="resumeFindObjectsRequest">
+    <wsdl:part name="parameters" element="tns1:resumeFindObjects" />
+  </wsdl:message>
+  <wsdl:message name="getDisseminationResponse">
+    <wsdl:part name="parameters" element="tns1:getDisseminationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Fedora-API-A">
+    <wsdl:operation name="describeRepository">
+      <wsdl:input name="describeRepositoryRequest" message="impl:describeRepositoryRequest" />
+      <wsdl:output name="describeRepositoryResponse" message="impl:describeRepositoryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getObjectProfile">
+      <wsdl:input name="getObjectProfileRequest" message="impl:getObjectProfileRequest" />
+      <wsdl:output name="getObjectProfileResponse" message="impl:getObjectProfileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="listMethods">
+      <wsdl:input name="listMethodsRequest" message="impl:listMethodsRequest" />
+      <wsdl:output name="listMethodsResponse" message="impl:listMethodsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="listDatastreams">
+      <wsdl:input name="listDatastreamsRequest" message="impl:listDatastreamsRequest" />
+      <wsdl:output name="listDatastreamsResponse" message="impl:listDatastreamsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatastreamDissemination">
+      <wsdl:input name="getDatastreamDisseminationRequest" message="impl:getDatastreamDisseminationRequest" />
+      <wsdl:output name="getDatastreamDisseminationResponse" message="impl:getDatastreamDisseminationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDissemination">
+      <wsdl:input name="getDisseminationRequest" message="impl:getDisseminationRequest" />
+      <wsdl:output name="getDisseminationResponse" message="impl:getDisseminationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="findObjects">
+      <wsdl:input name="findObjectsRequest" message="impl:findObjectsRequest" />
+      <wsdl:output name="findObjectsResponse" message="impl:findObjectsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="resumeFindObjects">
+      <wsdl:input name="resumeFindObjectsRequest" message="impl:resumeFindObjectsRequest" />
+      <wsdl:output name="resumeFindObjectsResponse" message="impl:resumeFindObjectsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getObjectHistory">
+      <wsdl:input name="getObjectHistoryRequest" message="impl:getObjectHistoryRequest" />
+      <wsdl:output name="getObjectHistoryResponse" message="impl:getObjectHistoryResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="accessSoapBinding" type="impl:Fedora-API-A">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="describeRepository">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#describeRepository" />
+      <wsdl:input name="describeRepositoryRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="describeRepositoryResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectProfile">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#getObjectProfile" />
+      <wsdl:input name="getObjectProfileRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getObjectProfileResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listMethods">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#listMethods" />
+      <wsdl:input name="listMethodsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="listMethodsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listDatastreams">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#listDatastreams" />
+      <wsdl:input name="listDatastreamsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="listDatastreamsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatastreamDissemination">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#getDatastreamDissemination" />
+      <wsdl:input name="getDatastreamDisseminationRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getDatastreamDisseminationResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDissemination">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#getDissemination" />
+      <wsdl:input name="getDisseminationRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getDisseminationResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findObjects">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#findObjects" />
+      <wsdl:input name="findObjectsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="findObjectsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="resumeFindObjects">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#resumeFindObjects" />
+      <wsdl:input name="resumeFindObjectsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="resumeFindObjectsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectHistory">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#getObjectHistory" />
+      <wsdl:input name="getObjectHistoryRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getObjectHistoryResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Fedora-API-A-Service">
+    <wsdl:port name="access" binding="impl:accessSoapBinding">
+      <wsdlsoap:address location="http://localhost:8080/fedora/services/access" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

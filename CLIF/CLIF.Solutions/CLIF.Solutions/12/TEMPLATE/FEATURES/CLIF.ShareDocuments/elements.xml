@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="CLIF.ShareDocuents"
+   RegistrationType="ContentType"
+   RegistrationId="0x0101"
+   Location="EditControlBlock"
+   Title="Share this item."
+   Sequence="102"
+   ImageUrl="_layouts/images/lg_ICONGO.gif">
+    <UrlAction Url="javascript:var site='{SiteUrl}';var list='{ListId}';var item='{ItemId}';var ItemUrl='{ItemUrl}';var view=ctx.view;var ret=window.open(site + '/_layouts/clifpages/additemtorepository.aspx?list='+ list + '&amp;item=' + item,'printwindow','scollbars=1,resizable=1,height=500,width=600');"/>
+  </CustomAction>
+</Elements>

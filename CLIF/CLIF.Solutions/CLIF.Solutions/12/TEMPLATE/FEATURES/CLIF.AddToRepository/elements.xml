@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="CLIF.AddThisItemToRepositoryMenu"
+     RegistrationType="ContentType"
+     RegistrationId="0x010100132D74E474FA4309A1777FEBED2BCE29"
+     Location="EditControlBlock"
+     Title="Copy To Repository"   
+     Sequence="102"
+     ImageUrl="_layouts/images/COPY.gif">
+     <UrlAction Url="javascript:var site='{SiteUrl}';var list='{ListId}';var item='{ItemId}';var ItemUrl='{ItemUrl}';var view=ctx.view;var ret=window.open(site + '/_layouts/clifpages/additemtorepository.aspx?list='+ list + '&amp;item=' + item,'printwindow','scollbars=1,resizable=1,height=650,width=600');"/>
+  </CustomAction>
+
+  <CustomAction
+      Id="CLIF.AddThisItemToRepositoryButton"
+      Title="Copy To Repository"
+      Sequence="0"
+      ImageUrl="_layouts/images/Copy.gif"
+      Rights="AddListItems"
+      Location="DisplayFormToolbar"
+      Description="This will creates a new 'Add to repository' button."
+      RegistrationId="0x010100132D74E474FA4309A1777FEBED2BCE29"
+      RegistrationType="ContentType">
+    <UrlAction Url="javascript:var site='{SiteUrl}';var list='{ListId}';var item='{ItemId}';var ItemUrl='{ItemUrl}';var view=ctx.view;var ret=window.open(site + '/_layouts/clifpages/additemtorepository.aspx?list='+ list + '&amp;item=' + item,'printwindow','scollbars=1,resizable=1,height=650,width=600');"/>
+  </CustomAction>
+  
+</Elements>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="56986508-d02b-431d-8e6d-267cd7b0669d" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate
+   Name="Projects"
+   DisplayName="Projects"
+   Description="Create a Project List."
+   BaseType="0"
+   Type="200013"
+   NoCrawl="TRUE" 
+   OnQuickLaunch="TRUE"
+   SecurityBits="11"
+   Sequence="110"
+   Image="/_layouts/images/itdl.gif"
+   />
+  <ListInstance
+    Title="Projects"
+    Description="Use this list store project details."
+    Id="300013"
+    TemplateType="200013"
+    Url="Lists/Projects"
+    OnQuickLaunch="TRUE"
+    FeatureId="0a41aa11-9357-4353-b2c3-512525a3bcee">
+  </ListInstance>
+  
+</Elements>

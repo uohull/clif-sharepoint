@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="0a41aa11-9357-4353-b2c3-512525a3bcee"
+          Title="CLIF.MySiteLookupList"
+          Description="Activating this feature adds MySite LookupList."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Site"
+          ImageUrl="kpinormal-0.gif"
+          DefaultResourceFile="core"
+          ReceiverAssembly="CLIF.Solutions.Code, Version=1.0.0.0, Culture=neutral, PublicKeyToken=10028f2947c748cd"
+          ReceiverClass="CLIF.Solutions.Code.Lists" 
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Properties>
+    <Property Key="Data" Value="ListData.xml"/>
+  </Properties>
+  <ElementManifests>
+    <!--Content Languages-->
+    <ElementManifest Location="Content Languages\ListDefinition.xml"/>
+
+    <!--Content Sources-->
+    <ElementManifest Location="Content Sources\ListDefinition.xml"/>
+
+    <!--Publishable Status-->
+    <ElementManifest Location="Publishable Status\ListDefinition.xml"/>
+
+    <!--Projects-->
+    <ElementManifest Location="Projects\ListDefinition.xml"/>
+
+  </ElementManifests>
+  <ActivationDependencies>
+    <!--CLIF.MySiteContentTypes-->
+    <!--<ActivationDependency FeatureId="a6461fd9-bc23-458b-91b7-1ad499e14033"/>-->
+  </ActivationDependencies>
+</Feature>

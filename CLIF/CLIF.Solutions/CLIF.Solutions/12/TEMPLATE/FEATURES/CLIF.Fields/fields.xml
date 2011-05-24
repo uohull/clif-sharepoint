@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+  <!--Persistent ID-->
+  <Field ID="{20E0F22C-8DD9-4216-ADB7-439140BA75F8}" Type="Text" DisplayName="Persistent ID"  Name="Persistent_x0020_ID"  StaticName="Persistent ID"   Required="FALSE"   MaxLength="100" Hidden="FALSE" ReadOnly="FALSE" Group="CLIF.Solutions" />
+
+  <!--Namespace Format-->
+  <Field ID="{8EC27356-44C1-40df-B37C-812F0701DF4E}" Type="Text" DisplayName="Namespace Format" Name="Namespace_x0020_Format" StaticName="Namespace Format" Required="FALSE" MaxLength="100" Hidden="FALSE" ReadOnly="FALSE" Group="CLIF.Solutions" />
+
+  <!--Label Format-->
+  <Field ID="{47526995-51C7-45dc-A1B7-EC32EA52A0FE}" Type="Text" DisplayName="Label Format" Name="Label_x0020_Format" StaticName="Label_x0020_Format" Required="FALSE" MaxLength="100" Hidden="FALSE" ReadOnly="FALSE" Group="CLIF.Solutions" />  
+   
+  <!--PID Format -->
+  <Field ID="{8269358B-EDB0-48ec-8DA4-C9BF48C8CC96}" Type="Text" DisplayName="PID Format" Name="PID_x0020_Format" StaticName="PID Format" Required="FALSE" MaxLength="100" Hidden="FALSE" ReadOnly="FALSE" Group="CLIF.Solutions" />
+  
+  <!--Default Root Object-->
+  <Field ID="{443E07A4-C036-41ff-9632-1FB883BFD023}" Type="Text" DisplayName="Default Root Object" Name="Default_x0020_Root_x0020_Object" StaticName="Default Root Object" Required="FALSE" MaxLength="100" Hidden="FALSE" ReadOnly="FALSE" Group="CLIF.Solutions" />
+
+  <!--Operation-->
+  <Field Type="Text" DisplayName="Operation" Required="FALSE" MaxLength="255" Group="CLIF.Solutions" ID="{04be423d-ec82-42e5-92ab-0c22696586ca}"  StaticName="Operation" Name="Operation" RowOrdinal="0" />
+  
+  <!--Document Library-->
+  <Field Type="Text" DisplayName="Document Library" Required="FALSE" MaxLength="255" Group="CLIF.Solutions" ID="{affd96ce-6979-449e-9af4-fe045dbe8d6d}"  StaticName="Document_x0020_Library" Name="Document_x0020_Library"  RowOrdinal="0" />
+
+  <!--Site Name-->
+  <Field Type="Text" DisplayName="Site" Required="FALSE" MaxLength="255" Group="CLIF.Solutions" ID="{58b714ac-5914-4158-a5e3-d9da0bbe9eb8}"  StaticName="Site" Name="Site"   RowOrdinal="0" />
+
+  <!--Document Link-->
+  <Field Type="URL" DisplayName="Document Link" Required="FALSE" Format="Hyperlink" Group="CLIF.Solutions" ID="{5afc3409-be5e-4217-99fd-e750bf534ff9}" StaticName="Document_x0020_Link" Name="Document_x0020_Link"  RowOrdinal="0" />
+
+  <!--Archive PID-->
+  <Field ID="{D1745756-A696-4066-A4D9-B15A4F10E4CE}" Type="Text" DisplayName="Archive PID" Name="Archive_x0020_PID" StaticName="Archive PID" Required="FALSE" MaxLength="100" Hidden="FALSE" ReadOnly="FALSE" Group="CLIF.Solutions" />
+
+  <!--File Path-->
+  <Field Type="Text" DisplayName="File Path" Group="CLIF.Solutions" Required="FALSE" MaxLength="255" ID="{8c5bf9b7-0921-487e-ac21-6605854025bf}"  StaticName="File_x0020_Path" Name="File_x0020_Path" RowOrdinal="0" />
+ 
+  <!--Document Approver-->
+  <Field ID="{E0911C35-71C8-4f0d-A788-7F365EFDED09}" Type="UserMulti" DisplayName="Document Approver" Required="FALSE" ShowField="Name" Mult="FALSE" StaticName="Document_x0020_Approver" Name="Document_x0020_Approver" Group="CLIF.Solutions" UserSelectionScope="0" UserSelectionMode="1"/>
+  
+  
+  <!--Due Date-->
+  <Field Type="DateTime" DisplayName="Due Date" Required="FALSE" Format="DateOnly" ID="{0c7d6a92-49df-44f3-8365-bf9eaa9b6776}" StaticName="Due_x0020_Date" Name="Due_x0020_Date" Group="CLIF.Solutions" RowOrdinal="0" />
+
+  <!--Document Author-->
+  <Field Type="User" DisplayName="Document Author" List="UserInfo" Required="FALSE" ShowField="ImnName" UserSelectionScope="0" ID="{19005f4a-2382-4bda-906b-889844adaaac}" StaticName="Document_x0020_Author" Name="Document_x0020_Author" RowOrdinal="0" />
+
+  <!--Status-->
+  <Field Type="Text" Group="CLIF.Solutions" DisplayName="Status" Required="FALSE" MaxLength="255" ID="{a3e9b7c0-8592-4c98-aa40-320b899e3587}" StaticName="Status" Name="Status" />
+  
+  <!--Task Ref-->
+  <Field Type="URL" Group="CLIF.Solutions" DisplayName="Task Ref" Required="TRUE" Format="Hyperlink" ID="{ce0e751e-685c-4b17-801b-ec353c652ba7}" StaticName="Task_x0020_Ref" Name="Task_x0020_Ref" />
+
+  <!--Location Description-->
+  <Field Type="Note" Group="CLIF.Solutions" DisplayName="Location Description" Required="FALSE" NumLines="6" RichText="TRUE" RichTextMode="Compatible" Sortable="FALSE" ID="{a29ea833-5ae6-4ee5-bbff-5610ee54c3e2}" StaticName="Location_x0020_Description" Name="Location_x0020_Description" RowOrdinal="0" />
+
+</Elements>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Solution SolutionId="ef91602d-0659-46e7-bad8-bc2e5dab0544" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <FeatureManifests>
+    <FeatureManifest Location="CLIF.DocumentApprovalWF\feature.xml"/>
+  </FeatureManifests>
+   <Assemblies>
+    <Assembly  DeploymentTarget="GlobalAssemblyCache" Location="CLIF.DocumentApprovalWF\CLIF.DocumentApprovalWF.dll"/>
+  </Assemblies>
+</Solution> 

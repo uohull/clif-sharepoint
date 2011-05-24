@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Lists>
+  <!--Publishable Status-->
+  <List Name="Publishable Status">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">None</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Draft</Field>          
+        </Row>
+        <Row>
+          <Field Name="Title">Awaiting for approval</Field>          
+        </Row>
+        <Row>
+          <Field Name="Title">Publication request approved</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Publication request rejected</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Copied to repository</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Published</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </List>
+
+  <!--Content Languages-->
+  <List Name="Content Languages">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">English</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">French</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">German</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </List>
+
+  <!--Content Sources-->
+  <List Name="Content Sources">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">Source 1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Source 2</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Source 3</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </List>
+</Lists>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="d27a801f-875f-4ba4-8092-6e20983d312e"
+          Title="CLIF.ShareThisDocument"
+          Description="Adds Share this document menu/button"
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Web"
+          ImageUrl="kpinormal-0.gif"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+</Feature>

@@ -1,0 +1,22 @@
+;*** BEGIN **********************************************************
+;**                                                                **
+;** Automatically generated on: Thu Apr 14 13:57:38 2011           **
+;**                                                                **
+;** MakeCAB Version: 5.2.3790.0                     **
+;**                                                                **
+;*** BEGIN **********************************************************
+[disk list]
+1,Disk 1
+[cabinet list]
+1,1,CLIF.DocumentApprovalWF.wsp
+[file list]
+1,1,manifest.xml,436
+1,1,CLIF.DocumentApprovalWF\workflow.xml,1069
+1,1,CLIF.DocumentApprovalWF\feature.xml,905
+1,1,CLIF.DocumentApprovalWF\Forms\CLIF_DocumentApproval_TaskEditForm.xsn,4522
+1,1,CLIF.DocumentApprovalWF\CLIF.DocumentApprovalWF.dll,22016
+;*** END ************************************************************
+;**                                                                **
+;** Automatically generated on: Thu Apr 14 13:57:38 2011           **
+;**                                                                **
+;*** END ************************************************************

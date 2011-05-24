@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns1="http://www.fedora.info/definitions/1/0/types/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://www.fedora.info/definitions/1/0/api/" xmlns:impl="http://www.fedora.info/definitions/1/0/api/" targetNamespace="http://www.fedora.info/definitions/1/0/api/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.fedora.info/definitions/1/0/types/">
+      <xsd:import namespace="http://www.fedora.info/definitions/1/0/api/" />
+      <xsd:element name="ingest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="objectXML" type="xsd:base64Binary" />
+            <xsd:element name="format" type="xsd:string" />
+            <xsd:element name="logMessage" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ingestResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="objectPID" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="modifyObject">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="state" type="xsd:string" />
+            <xsd:element name="label" type="xsd:string" />
+            <xsd:element name="ownerId" type="xsd:string" />
+            <xsd:element name="logMessage" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="modifyObjectResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="modifiedDate" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getObjectXML">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getObjectXMLResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="objectXML" type="xsd:base64Binary" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="export">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+            <xsd:element name="context" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="exportResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="objectXML" type="xsd:base64Binary" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="purgeObject">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="logMessage" type="xsd:string" />
+            <xsd:element name="force" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="purgeObjectResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="purgedDate" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addDatastream">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="dsID" type="xsd:string" />
+            <xsd:element maxOccurs="unbounded" name="altIDs" type="xsd:string" />
+            <xsd:element name="dsLabel" type="xsd:string" />
+            <xsd:element name="versionable" type="xsd:boolean" />
+            <xsd:element name="MIMEType" type="xsd:string" />
+            <xsd:element name="formatURI" type="xsd:string" />
+            <xsd:element name="dsLocation" type="xsd:string" />
+            <xsd:element name="controlGroup" type="xsd:string" />
+            <xsd:element name="dsState" type="xsd:string" />
+            <xsd:element name="checksumType" type="xsd:string" />
+            <xsd:element name="checksum" type="xsd:string" />
+            <xsd:element name="logMessage" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addDatastreamResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="datastreamID" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="modifyDatastreamByReference">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="dsID" type="xsd:string" />
+            <xsd:element maxOccurs="unbounded" name="altIDs" type="xsd:string" />
+            <xsd:element name="dsLabel" type="xsd:string" />
+            <xsd:element name="MIMEType" type="xsd:string" />
+            <xsd:element name="formatURI" type="xsd:string" />
+            <xsd:element name="dsLocation" type="xsd:string" />
+            <xsd:element name="checksumType" type="xsd:string" />
+            <xsd:element name="checksum" type="xsd:string" />
+            <xsd:element name="logMessage" type="xsd:string" />
+            <xsd:element name="force" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="modifyDatastreamByReferenceResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="modifiedDate" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="modifyDatastreamByValue">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="dsID" type="xsd:string" />
+            <xsd:element maxOccurs="unbounded" name="altIDs" type="xsd:string" />
+            <xsd:element name="dsLabel" type="xsd:string" />
+            <xsd:element name="MIMEType" type="xsd:string" />
+            <xsd:element name="formatURI" type="xsd:string" />
+            <xsd:element name="dsContent" type="xsd:base64Binary" />
+            <xsd:element name="checksumType" type="xsd:string" />
+            <xsd:element name="checksum" type="xsd:string" />
+            <xsd:element name="logMessage" type="xsd:string" />
+            <xsd:element name="force" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="modifyDatastreamByValueResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="modifiedDate" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setDatastreamState">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="dsID" type="xsd:string" />
+            <xsd:element name="dsState" type="xsd:string" />
+            <xsd:element name="logMessage" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setDatastreamStateResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="modifiedDate" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setDatastreamVersionable">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="dsID" type="xsd:string" />
+            <xsd:element name="versionable" type="xsd:boolean" />
+            <xsd:element name="logMessage" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setDatastreamVersionableResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="modifiedDate" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="compareDatastreamChecksum">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="dsID" type="xsd:string" />
+            <xsd:element name="versionDate" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="compareDatastreamChecksumResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="checksum" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDatastream">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="dsID" type="xsd:string" />
+            <xsd:element name="asOfDateTime" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDatastreamResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="datastream" type="tns1:Datastream" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:simpleType name="DatastreamControlGroup">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="E" />
+          <xsd:enumeration value="M" />
+          <xsd:enumeration value="X" />
+          <xsd:enumeration value="R" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="Datastream">
+        <xsd:sequence>
+          <xsd:element name="controlGroup" type="tns1:DatastreamControlGroup" />
+          <xsd:element name="ID" type="xsd:string" />
+          <xsd:element name="versionID" type="xsd:string" />
+          <xsd:element name="altIDs" nillable="true" type="impl:ArrayOf_xsd_string" />
+          <xsd:element name="label" nillable="true" type="xsd:string" />
+          <xsd:element name="versionable" type="xsd:boolean" />
+          <xsd:element name="MIMEType" nillable="true" type="xsd:string" />
+          <xsd:element name="formatURI" nillable="true" type="xsd:string" />
+          <xsd:element name="createDate" type="xsd:string" />
+          <xsd:element name="size" type="xsd:long" />
+          <xsd:element name="state" type="xsd:string" />
+          <xsd:element name="location" nillable="true" type="xsd:string" />
+          <xsd:element name="checksumType" nillable="true" type="xsd:string" />
+          <xsd:element name="checksum" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getDatastreams">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="asOfDateTime" type="xsd:string" />
+            <xsd:element name="dsState" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDatastreamsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="datastream" type="tns1:Datastream" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDatastreamHistory">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="dsID" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDatastreamHistoryResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="datastream" type="tns1:Datastream" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="purgeDatastream">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="dsID" type="xsd:string" />
+            <xsd:element name="startDT" type="xsd:string" />
+            <xsd:element name="endDT" type="xsd:string" />
+            <xsd:element name="logMessage" type="xsd:string" />
+            <xsd:element name="force" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="purgeDatastreamResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="purgedVersionDate" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getNextPID">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="numPIDs" type="xsd:nonNegativeInteger" />
+            <xsd:element name="pidNamespace" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getNextPIDResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="pid" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getRelationships">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="relationship" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getRelationshipsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="relationships" type="tns1:RelationshipTuple" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="RelationshipTuple">
+        <xsd:sequence>
+          <xsd:element name="subject" type="xsd:string" />
+          <xsd:element name="predicate" type="xsd:string" />
+          <xsd:element name="object" type="xsd:string" />
+          <xsd:element name="isLiteral" type="xsd:boolean" />
+          <xsd:element name="datatype" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="addRelationship">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="relationship" type="xsd:string" />
+            <xsd:element name="object" type="xsd:string" />
+            <xsd:element name="isLiteral" type="xsd:boolean" />
+            <xsd:element name="datatype" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addRelationshipResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="added" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="purgeRelationship">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pid" type="xsd:string" />
+            <xsd:element name="relationship" type="xsd:string" />
+            <xsd:element name="object" type="xsd:string" />
+            <xsd:element name="isLiteral" type="xsd:boolean" />
+            <xsd:element name="datatype" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="purgeRelationshipResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="purged" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.fedora.info/definitions/1/0/api/">
+      <xsd:import namespace="http://www.fedora.info/definitions/1/0/types/" />
+      <xsd:complexType name="ArrayOf_xsd_string">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="modifyDatastreamByValueResponse">
+    <wsdl:part name="parameters" element="tns1:modifyDatastreamByValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="modifyDatastreamByReferenceRequest">
+    <wsdl:part name="parameters" element="tns1:modifyDatastreamByReference" />
+  </wsdl:message>
+  <wsdl:message name="getRelationshipsRequest">
+    <wsdl:part name="parameters" element="tns1:getRelationships" />
+  </wsdl:message>
+  <wsdl:message name="getDatastreamsResponse">
+    <wsdl:part name="parameters" element="tns1:getDatastreamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="exportRequest">
+    <wsdl:part name="parameters" element="tns1:export" />
+  </wsdl:message>
+  <wsdl:message name="addDatastreamRequest">
+    <wsdl:part name="parameters" element="tns1:addDatastream" />
+  </wsdl:message>
+  <wsdl:message name="setDatastreamStateResponse">
+    <wsdl:part name="parameters" element="tns1:setDatastreamStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="addRelationshipResponse">
+    <wsdl:part name="parameters" element="tns1:addRelationshipResponse" />
+  </wsdl:message>
+  <wsdl:message name="modifyObjectResponse">
+    <wsdl:part name="parameters" element="tns1:modifyObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="compareDatastreamChecksumRequest">
+    <wsdl:part name="parameters" element="tns1:compareDatastreamChecksum" />
+  </wsdl:message>
+  <wsdl:message name="getDatastreamResponse">
+    <wsdl:part name="parameters" element="tns1:getDatastreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="compareDatastreamChecksumResponse">
+    <wsdl:part name="parameters" element="tns1:compareDatastreamChecksumResponse" />
+  </wsdl:message>
+  <wsdl:message name="purgeDatastreamResponse">
+    <wsdl:part name="parameters" element="tns1:purgeDatastreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="purgeRelationshipRequest">
+    <wsdl:part name="parameters" element="tns1:purgeRelationship" />
+  </wsdl:message>
+  <wsdl:message name="setDatastreamVersionableRequest">
+    <wsdl:part name="parameters" element="tns1:setDatastreamVersionable" />
+  </wsdl:message>
+  <wsdl:message name="setDatastreamStateRequest">
+    <wsdl:part name="parameters" element="tns1:setDatastreamState" />
+  </wsdl:message>
+  <wsdl:message name="getRelationshipsResponse">
+    <wsdl:part name="parameters" element="tns1:getRelationshipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNextPIDRequest">
+    <wsdl:part name="parameters" element="tns1:getNextPID" />
+  </wsdl:message>
+  <wsdl:message name="ingestRequest">
+    <wsdl:part name="parameters" element="tns1:ingest" />
+  </wsdl:message>
+  <wsdl:message name="addRelationshipRequest">
+    <wsdl:part name="parameters" element="tns1:addRelationship" />
+  </wsdl:message>
+  <wsdl:message name="purgeObjectResponse">
+    <wsdl:part name="parameters" element="tns1:purgeObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="purgeDatastreamRequest">
+    <wsdl:part name="parameters" element="tns1:purgeDatastream" />
+  </wsdl:message>
+  <wsdl:message name="exportResponse">
+    <wsdl:part name="parameters" element="tns1:exportResponse" />
+  </wsdl:message>
+  <wsdl:message name="purgeObjectRequest">
+    <wsdl:part name="parameters" element="tns1:purgeObject" />
+  </wsdl:message>
+  <wsdl:message name="purgeRelationshipResponse">
+    <wsdl:part name="parameters" element="tns1:purgeRelationshipResponse" />
+  </wsdl:message>
+  <wsdl:message name="modifyDatastreamByValueRequest">
+    <wsdl:part name="parameters" element="tns1:modifyDatastreamByValue" />
+  </wsdl:message>
+  <wsdl:message name="getDatastreamsRequest">
+    <wsdl:part name="parameters" element="tns1:getDatastreams" />
+  </wsdl:message>
+  <wsdl:message name="modifyObjectRequest">
+    <wsdl:part name="parameters" element="tns1:modifyObject" />
+  </wsdl:message>
+  <wsdl:message name="getObjectXMLResponse">
+    <wsdl:part name="parameters" element="tns1:getObjectXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="modifyDatastreamByReferenceResponse">
+    <wsdl:part name="parameters" element="tns1:modifyDatastreamByReferenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDatastreamHistoryRequest">
+    <wsdl:part name="parameters" element="tns1:getDatastreamHistory" />
+  </wsdl:message>
+  <wsdl:message name="getObjectXMLRequest">
+    <wsdl:part name="parameters" element="tns1:getObjectXML" />
+  </wsdl:message>
+  <wsdl:message name="getDatastreamRequest">
+    <wsdl:part name="parameters" element="tns1:getDatastream" />
+  </wsdl:message>
+  <wsdl:message name="getDatastreamHistoryResponse">
+    <wsdl:part name="parameters" element="tns1:getDatastreamHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="setDatastreamVersionableResponse">
+    <wsdl:part name="parameters" element="tns1:setDatastreamVersionableResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNextPIDResponse">
+    <wsdl:part name="parameters" element="tns1:getNextPIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ingestResponse">
+    <wsdl:part name="parameters" element="tns1:ingestResponse" />
+  </wsdl:message>
+  <wsdl:message name="addDatastreamResponse">
+    <wsdl:part name="parameters" element="tns1:addDatastreamResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Fedora-API-M">
+    <wsdl:operation name="ingest">
+      <wsdl:input name="ingestRequest" message="impl:ingestRequest" />
+      <wsdl:output name="ingestResponse" message="impl:ingestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyObject">
+      <wsdl:input name="modifyObjectRequest" message="impl:modifyObjectRequest" />
+      <wsdl:output name="modifyObjectResponse" message="impl:modifyObjectResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getObjectXML">
+      <wsdl:input name="getObjectXMLRequest" message="impl:getObjectXMLRequest" />
+      <wsdl:output name="getObjectXMLResponse" message="impl:getObjectXMLResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="export">
+      <wsdl:input name="exportRequest" message="impl:exportRequest" />
+      <wsdl:output name="exportResponse" message="impl:exportResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="purgeObject">
+      <wsdl:input name="purgeObjectRequest" message="impl:purgeObjectRequest" />
+      <wsdl:output name="purgeObjectResponse" message="impl:purgeObjectResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="addDatastream">
+      <wsdl:input name="addDatastreamRequest" message="impl:addDatastreamRequest" />
+      <wsdl:output name="addDatastreamResponse" message="impl:addDatastreamResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyDatastreamByReference">
+      <wsdl:input name="modifyDatastreamByReferenceRequest" message="impl:modifyDatastreamByReferenceRequest" />
+      <wsdl:output name="modifyDatastreamByReferenceResponse" message="impl:modifyDatastreamByReferenceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyDatastreamByValue">
+      <wsdl:input name="modifyDatastreamByValueRequest" message="impl:modifyDatastreamByValueRequest" />
+      <wsdl:output name="modifyDatastreamByValueResponse" message="impl:modifyDatastreamByValueResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setDatastreamState">
+      <wsdl:input name="setDatastreamStateRequest" message="impl:setDatastreamStateRequest" />
+      <wsdl:output name="setDatastreamStateResponse" message="impl:setDatastreamStateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setDatastreamVersionable">
+      <wsdl:input name="setDatastreamVersionableRequest" message="impl:setDatastreamVersionableRequest" />
+      <wsdl:output name="setDatastreamVersionableResponse" message="impl:setDatastreamVersionableResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="compareDatastreamChecksum">
+      <wsdl:input name="compareDatastreamChecksumRequest" message="impl:compareDatastreamChecksumRequest" />
+      <wsdl:output name="compareDatastreamChecksumResponse" message="impl:compareDatastreamChecksumResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatastream">
+      <wsdl:input name="getDatastreamRequest" message="impl:getDatastreamRequest" />
+      <wsdl:output name="getDatastreamResponse" message="impl:getDatastreamResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatastreams">
+      <wsdl:input name="getDatastreamsRequest" message="impl:getDatastreamsRequest" />
+      <wsdl:output name="getDatastreamsResponse" message="impl:getDatastreamsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatastreamHistory">
+      <wsdl:input name="getDatastreamHistoryRequest" message="impl:getDatastreamHistoryRequest" />
+      <wsdl:output name="getDatastreamHistoryResponse" message="impl:getDatastreamHistoryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="purgeDatastream">
+      <wsdl:input name="purgeDatastreamRequest" message="impl:purgeDatastreamRequest" />
+      <wsdl:output name="purgeDatastreamResponse" message="impl:purgeDatastreamResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getNextPID">
+      <wsdl:input name="getNextPIDRequest" message="impl:getNextPIDRequest" />
+      <wsdl:output name="getNextPIDResponse" message="impl:getNextPIDResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getRelationships">
+      <wsdl:input name="getRelationshipsRequest" message="impl:getRelationshipsRequest" />
+      <wsdl:output name="getRelationshipsResponse" message="impl:getRelationshipsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="addRelationship">
+      <wsdl:input name="addRelationshipRequest" message="impl:addRelationshipRequest" />
+      <wsdl:output name="addRelationshipResponse" message="impl:addRelationshipResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="purgeRelationship">
+      <wsdl:input name="purgeRelationshipRequest" message="impl:purgeRelationshipRequest" />
+      <wsdl:output name="purgeRelationshipResponse" message="impl:purgeRelationshipResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="managementSoapBinding" type="impl:Fedora-API-M">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ingest">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#ingest" />
+      <wsdl:input name="ingestRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ingestResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyObject">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#modifyObject" />
+      <wsdl:input name="modifyObjectRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="modifyObjectResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectXML">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#getObjectXML" />
+      <wsdl:input name="getObjectXMLRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getObjectXMLResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#export" />
+      <wsdl:input name="exportRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="exportResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="purgeObject">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#purgeObject" />
+      <wsdl:input name="purgeObjectRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="purgeObjectResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addDatastream">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#addDatastream" />
+      <wsdl:input name="addDatastreamRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addDatastreamResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyDatastreamByReference">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#modifyDatastreamByReference" />
+      <wsdl:input name="modifyDatastreamByReferenceRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="modifyDatastreamByReferenceResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyDatastreamByValue">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#modifyDatastreamByValue" />
+      <wsdl:input name="modifyDatastreamByValueRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="modifyDatastreamByValueResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setDatastreamState">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#setDatastreamState" />
+      <wsdl:input name="setDatastreamStateRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setDatastreamStateResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setDatastreamVersionable">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#setDatastreamVersionable" />
+      <wsdl:input name="setDatastreamVersionableRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setDatastreamVersionableResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="compareDatastreamChecksum">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#compareDatastreamChecksum" />
+      <wsdl:input name="compareDatastreamChecksumRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="compareDatastreamChecksumResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatastream">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#getDatastream" />
+      <wsdl:input name="getDatastreamRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getDatastreamResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatastreams">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#getDatastreams" />
+      <wsdl:input name="getDatastreamsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getDatastreamsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatastreamHistory">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#getDatastreamHistory" />
+      <wsdl:input name="getDatastreamHistoryRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getDatastreamHistoryResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="purgeDatastream">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#purgeDatastream" />
+      <wsdl:input name="purgeDatastreamRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="purgeDatastreamResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNextPID">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#getNextPID" />
+      <wsdl:input name="getNextPIDRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getNextPIDResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRelationships">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#getRelationships" />
+      <wsdl:input name="getRelationshipsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getRelationshipsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addRelationship">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#addRelationship" />
+      <wsdl:input name="addRelationshipRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addRelationshipResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="purgeRelationship">
+      <wsdlsoap:operation soapAction="http://www.fedora.info/definitions/1/0/api/#purgeRelationship" />
+      <wsdl:input name="purgeRelationshipRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="purgeRelationshipResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Fedora-API-M-Service">
+    <wsdl:port name="management" binding="impl:managementSoapBinding">
+      <wsdlsoap:address location="http://localhost:8080/fedora/services/management" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

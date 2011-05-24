@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature
+	Id="B0A0A13D-FC80-408e-8F61-E36FEFC29F98"
+	Title="CLIF.Scripts"
+	Description="Activating this feature adds CLIF scripts files."
+	Version="12.0.0.0"
+	Hidden="FALSE"
+	Scope="Site"
+	ImageUrl="kpinormal-0.gif"
+	DefaultResourceFile="core" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest
+			Location="elements.xml" />
+		<ElementFile
+			Location="Files/ajax.js" />
+		<ElementFile
+			Location="Files/jquery-1.3.2-vsdoc2.js" />
+	</ElementManifests>
+</Feature>

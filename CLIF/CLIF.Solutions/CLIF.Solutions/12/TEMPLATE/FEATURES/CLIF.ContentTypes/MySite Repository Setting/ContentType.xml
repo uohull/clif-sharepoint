@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ContentType 
+    ID="0x01004A713740F65648eb9EB3C844CB97E8B2" 
+    Name="MySite Repository Setting" 
+    Group="CLIF.Solutions">
+   <FieldRefs>    
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="TRUE" DisplayName="MySite Name" />
+      <FieldRef ID="{443e07a4-c036-41ff-9632-1fb883bfd023}" Name="Default_x0020_Root_x0020_Object" Required="TRUE" ShowInEditForm="TRUE" ShowInDisplayForm="TRUE" ShowInNewForm="TRUE"/>
+      <FieldRef ID="{47526995-51c7-45dc-a1b7-ec32ea52a0fe}" Name="Label_x0020_Format" Required="TRUE" ShowInDisplayForm="TRUE" ShowInEditForm="TRUE" ShowInNewForm="TRUE"/>
+      <FieldRef ID="{8ec27356-44c1-40df-b37c-812f0701df4e}" Name="Namespace_x0020_Format" Required="TRUE" ShowInDisplayForm="TRUE" ShowInEditForm="TRUE" ShowInNewForm="TRUE"/>
+      <FieldRef ID="{8269358b-edb0-48ec-8da4-c9bf48c8cc96}" Name="PID_x0020_Format" Required="TRUE" ShowInDisplayForm="TRUE" ShowInEditForm="TRUE" ShowInNewForm="TRUE"/>
+     <FieldRef ID="{D1745756-A696-4066-A4D9-B15A4F10E4CE}" Name="Archive_x0020_PID" ShowInDisplayForm="TRUE" Required="TRUE" ShowInEditForm="TRUE" ShowInNewForm="TRUE"/>
+    </FieldRefs>  
+  </ContentType>
+
+</Elements>

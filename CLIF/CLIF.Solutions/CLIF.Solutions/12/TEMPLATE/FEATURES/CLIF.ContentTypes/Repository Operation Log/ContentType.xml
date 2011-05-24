@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ContentType 
+    ID="0x010057AC83EF367947eb83D3F5730C66A452" 
+    Name="Repository Operation Log" 
+    Group="CLIF.Solutions" 
+    Version="4"> 
+    <FieldRefs>
+      <FieldRef ID="{c042a256-787d-4a6f-8a8a-cf6ab767f12d}" Name="ContentType" />
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="TRUE" DisplayName="Document Name" />
+      <FieldRef ID="{04be423d-ec82-42e5-92ab-0c22696586ca}" Name="Operation" />
+      <FieldRef ID="{affd96ce-6979-449e-9af4-fe045dbe8d6d}" Name="Document_x0020_Library" />
+      <!--<FieldRef ID="{58b714ac-5914-4158-a5e3-d9da0bbe9eb8}" Name="Site" />-->
+      <FieldRef ID="{5afc3409-be5e-4217-99fd-e750bf534ff9}" Name="Document_x0020_Link" />
+    </FieldRefs>
+  </ContentType>
+
+</Elements>

@@ -1,0 +1,10 @@
+C:\Work\CLIF\CLIF.Solutions\CLIF.Solutions\obj\Debug\ResolveAssemblyReference.cache
+C:\Work\CLIF\CLIF.Solutions\CLIF.Solutions\80\bin\CLIF.Solutions.dll
+C:\Work\CLIF\CLIF.Solutions\CLIF.Solutions\80\bin\CLIF.Solutions.pdb
+C:\Work\CLIF\CLIF.Solutions\CLIF.Solutions\obj\Debug\CLIF.Solutions.dll
+C:\Work\CLIF\CLIF.Solutions\CLIF.Solutions\obj\Debug\CLIF.Solutions.pdb
+C:\GIT\clif-sharepoint\CLIF\CLIF.Solutions\CLIF.Solutions\80\bin\CLIF.Solutions.dll
+C:\GIT\clif-sharepoint\CLIF\CLIF.Solutions\CLIF.Solutions\80\bin\CLIF.Solutions.pdb
+C:\GIT\clif-sharepoint\CLIF\CLIF.Solutions\CLIF.Solutions\obj\Debug\ResolveAssemblyReference.cache
+C:\GIT\clif-sharepoint\CLIF\CLIF.Solutions\CLIF.Solutions\obj\Debug\CLIF.Solutions.dll
+C:\GIT\clif-sharepoint\CLIF\CLIF.Solutions\CLIF.Solutions\obj\Debug\CLIF.Solutions.pdb

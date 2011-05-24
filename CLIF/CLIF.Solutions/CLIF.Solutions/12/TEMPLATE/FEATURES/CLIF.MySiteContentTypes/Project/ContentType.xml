@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ContentType
+    ID="0x0100EB7D11CEBD191241A32ECBAE0122CFDA"
+    Name="Project"
+    Group="CLIF.Solutions"
+    Description="Create a new project"
+    Version="4"
+    >
+    <FieldRefs>
+      <FieldRef ID="{c042a256-787d-4a6f-8a8a-cf6ab767f12d}" Name="ContentType" />
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="TRUE" ShowInNewForm="TRUE" ShowInEditForm="TRUE" />
+      <FieldRef ID="{b13374c6-7af5-494c-9cd1-56e068dbb3de}" Name="Project Description" Required="FALSE" />
+    </FieldRefs>
+  </ContentType>
+</Elements>
